@@ -21,6 +21,6 @@ public class MainActivity extends AppCompatActivity {
         editText = (EditText)findViewById(R.id.editText);
         textView = (TextView)findViewById(R.id.textView);
         editText.getText().toString();
-        //editText.setText("deneme");//
+        //editText.setText("deneme");
     }
 }
