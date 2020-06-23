@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
         duzenle(textView1);
     }
 
-    public void duzenle(View v){
+    public void duzenle(View view){
         Toast.makeText(getApplicationContext(),"True",Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(MainActivity.this,EditActivity.class);
+        Intent intent = new Intent(getApplicationContext(),EditActivity.class);
         startActivity(intent);
     }
 
