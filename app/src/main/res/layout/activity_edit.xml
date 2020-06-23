@@ -22,8 +22,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/baslik"
-        android:hint="Ders Adı"
-                />
+        android:hint="Ders Adı"/>
 
     <EditText
         android:id="@+id/hocaismi"
