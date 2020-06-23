@@ -11,16 +11,16 @@ public class MainActivity extends AppCompatActivity {
 
     TextView textView;
     EditText editText;
-
+    Button button1, button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textView = (TextView)findViewById(R.id.textView);
         editText = (EditText)findViewById(R.id.editText);
-
-
+        textView = (TextView)findViewById(R.id.textView);
+        editText.getText().toString();
+        //deneme
     }
 }
