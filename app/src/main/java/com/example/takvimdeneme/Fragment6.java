@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-public class Fragment3 extends Fragment {
+public class Fragment6 extends Fragment {
 
     private Button buton1;
     private Button buton2;
@@ -26,23 +26,24 @@ public class Fragment3 extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment3,container,false);
+       View view = inflater.inflate(R.layout.fragment6,container,false);
 
-        buton1 = view.findViewById(R.id.buton1);
-        buton2 = view.findViewById(R.id.buton2);
+       buton1 = view.findViewById(R.id.buton1);
+       buton2 = view.findViewById(R.id.buton2);
 
-        buton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gecis(new Fragment2());
-            }
-        });
-        buton2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gecis(new Fragment4());
-            }
-        });
+       buton1.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               gecis(new Fragment5());
+           }
+       });
+
+       buton2.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               gecis(new Fragment7());
+           }
+       });
 
         return view;
     }

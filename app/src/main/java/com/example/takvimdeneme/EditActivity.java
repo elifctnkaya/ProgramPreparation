@@ -28,6 +28,7 @@ public class EditActivity extends AppCompatActivity {
         db_ekle(button);
     }
 
+
     public void db_ekle(View view){
         Toast.makeText(getApplicationContext(),"Eklendi",Toast.LENGTH_SHORT).show();
     }

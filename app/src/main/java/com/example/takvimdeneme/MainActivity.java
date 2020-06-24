@@ -30,16 +30,6 @@ public class MainActivity extends AppCompatActivity {
 
         gecis(new Fragment1());
 
-        button2 = findViewById(R.id.buton2);
-
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gecis(new Fragment2());
-
-            }
-        });
-
         //textView1 = findViewById(R.id.editText);
         duzenle(textView1);
     }
