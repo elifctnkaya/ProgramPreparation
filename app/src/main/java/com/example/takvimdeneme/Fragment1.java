@@ -17,7 +17,7 @@ import androidx.fragment.app.FragmentTransaction;
 public class Fragment1 extends Fragment {
 
     private Button buton2;
-    private TextView textView;
+    private TextView textView1;
 
 /*
     public void gecis(Fragment fragment){
@@ -31,19 +31,19 @@ public class Fragment1 extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-
-
         View view = inflater.inflate(R.layout.fragment1,container,false);
+
+        textView1 = view.findViewById(R.id.textview);
 
         buton2 = view.findViewById(R.id.buton2);
         buton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //gecis(new Fragment2());
-
+                sendData();
             }
         });
-        textView = view.findViewById(R.id.textview);
+
 
        // VeriGonderme verigönderme =(VeriGonderme) getActivity();
 
@@ -52,7 +52,8 @@ public class Fragment1 extends Fragment {
 
     public void sendData(){
         Intent intent = new Intent(getActivity().getBaseContext(),EditActivity.class);
-        //intent.add("GUN",)
+        intent.putExtra("GUN",textView1.getText().toString());
+        getActivity().startActivity(intent);
     }
 
 

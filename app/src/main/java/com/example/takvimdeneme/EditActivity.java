@@ -26,7 +26,8 @@ public class EditActivity extends AppCompatActivity {
         editText2 = findViewById(R.id.hocaismi);
         button = findViewById(R.id.ekle);
         db_ekle(button);
-
+        String gun = this.getIntent().getExtras().getString("GUN");
+        textView.setText(gun);
     }
 
 
