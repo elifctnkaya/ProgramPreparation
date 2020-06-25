@@ -41,6 +41,7 @@ public class Fragment1 extends Fragment {
         });
         textView = view.findViewById(R.id.textview);
 
+       // VeriGonderme verigönderme =(VeriGonderme) getActivity();
 
         return view;
     }
