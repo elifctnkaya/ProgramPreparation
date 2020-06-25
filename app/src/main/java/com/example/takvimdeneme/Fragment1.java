@@ -1,5 +1,6 @@
 package com.example.takvimdeneme;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,17 +19,19 @@ public class Fragment1 extends Fragment {
     private Button buton2;
     private TextView textView;
 
-
+/*
     public void gecis(Fragment fragment){
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frame, fragment);
         fragmentTransaction.commit();
     }
-
+*/
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
+
 
         View view = inflater.inflate(R.layout.fragment1,container,false);
 
@@ -36,7 +39,8 @@ public class Fragment1 extends Fragment {
         buton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gecis(new Fragment2());
+                //gecis(new Fragment2());
+
             }
         });
         textView = view.findViewById(R.id.textview);
@@ -44,6 +48,11 @@ public class Fragment1 extends Fragment {
        // VeriGonderme verigönderme =(VeriGonderme) getActivity();
 
         return view;
+    }
+
+    public void sendData(){
+        Intent intent = new Intent(getActivity().getBaseContext(),EditActivity.class);
+        //intent.add("GUN",)
     }
 
 
