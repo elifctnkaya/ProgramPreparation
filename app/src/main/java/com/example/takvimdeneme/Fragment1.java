@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,6 +16,7 @@ import androidx.fragment.app.FragmentTransaction;
 public class Fragment1 extends Fragment {
 
     private Button buton2;
+
 
     public void gecis(Fragment fragment){
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
@@ -36,6 +38,7 @@ public class Fragment1 extends Fragment {
                 gecis(new Fragment2());
             }
         });
+
 
         return view;
     }
