@@ -16,6 +16,7 @@ import androidx.fragment.app.FragmentTransaction;
 public class Fragment1 extends Fragment {
 
     private Button buton2;
+    private TextView textView;
 
 
     public void gecis(Fragment fragment){
@@ -38,6 +39,7 @@ public class Fragment1 extends Fragment {
                 gecis(new Fragment2());
             }
         });
+        textView = view.findViewById(R.id.textview);
 
 
         return view;

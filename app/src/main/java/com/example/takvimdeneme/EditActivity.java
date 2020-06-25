@@ -27,7 +27,6 @@ public class EditActivity extends AppCompatActivity {
         button = findViewById(R.id.ekle);
         db_ekle(button);
 
-
     }
 
 
