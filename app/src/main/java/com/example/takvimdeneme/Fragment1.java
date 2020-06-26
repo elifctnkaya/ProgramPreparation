@@ -73,7 +73,7 @@ public class Fragment1 extends Fragment {
 
 
        // VeriGonderme verigönderme =(VeriGonderme) getActivity();
-
+//hata almamak için deneme yorum satırı
         return view;
     }
 
