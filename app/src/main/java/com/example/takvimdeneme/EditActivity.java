@@ -1,6 +1,7 @@
 package com.example.takvimdeneme;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +12,7 @@ import android.widget.Toast;
 
 public class EditActivity extends AppCompatActivity {
 
-    private TextView textView;
+    private TextView editText;
     private EditText editText1;
     private EditText editText2;
     private Button button;
@@ -21,15 +22,13 @@ public class EditActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit);
 
-        textView = findViewById(R.id.baslik);
+        editText = findViewById(R.id.baslik);
         editText1 = findViewById(R.id.dersAdi);
         editText2 = findViewById(R.id.hocaismi);
         button = findViewById(R.id.ekle);
         db_ekle(button);
-        String gun = this.getIntent().getExtras().getString("GUN");
-        textView.setText(gun);
-    }
 
+    }
 
     public void db_ekle(View view){
         Toast.makeText(getApplicationContext(),"Eklendi",Toast.LENGTH_SHORT).show();

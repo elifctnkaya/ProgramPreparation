@@ -1,11 +1,13 @@
 package com.example.takvimdeneme;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,47 +16,53 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-public class Fragment1 extends Fragment {
+public class Fragment1 extends Fragment{
 
     private Button buton2;
     private TextView textView1;
+    private TextView textview;
+    private Button button;
 
-/*
-    public void gecis(Fragment fragment){
+
+    //fragmentler arası geçiş methodu
+    public void gecis(Fragment fragment) {
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frame, fragment);
         fragmentTransaction.commit();
     }
-*/
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment1,container,false);
+        View view = inflater.inflate(R.layout.fragment1, container, false);
 
         textView1 = view.findViewById(R.id.textview);
-
+        button = view.findViewById(R.id.button);
         buton2 = view.findViewById(R.id.buton2);
         buton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //gecis(new Fragment2());
-                sendData();
+                gecis(new Fragment2());
+            }
+
+        });
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
 
 
-       // VeriGonderme verigönderme =(VeriGonderme) getActivity();
-
         return view;
+
     }
 
-    public void sendData(){
-        Intent intent = new Intent(getActivity().getBaseContext(),EditActivity.class);
-        intent.putExtra("GUN",textView1.getText().toString());
-        getActivity().startActivity(intent);
-    }
 
 
 }
+
+

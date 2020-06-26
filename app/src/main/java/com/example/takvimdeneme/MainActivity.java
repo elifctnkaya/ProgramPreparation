@@ -12,11 +12,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     private Button button2;
     private TextView textView1;
 
+    //fragmentler arası geçiş methodu
     public void gecis(Fragment fragment){
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frame,fragment);
@@ -38,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(),"True",Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getApplicationContext(),EditActivity.class);
         startActivity(intent);
+
     }
+
 
 }

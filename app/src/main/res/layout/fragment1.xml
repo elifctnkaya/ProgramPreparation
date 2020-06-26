@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:ignore="OnClick">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -25,6 +26,11 @@
             android:paddingTop="10dp"
             android:paddingLeft="15dp"/>
 
+        <Button
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/button"
+            />
         <Button
             android:layout_width="100dp"
             android:layout_height="50dp"
@@ -341,7 +347,8 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/editText9"
                     android:layout_toRightOf="@+id/textView10"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    tools:ignore="OnClick"/>
 
                 <View
                     android:layout_width="match_parent"
@@ -366,7 +373,8 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/editText10"
                     android:layout_toRightOf="@+id/textView11"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    tools:ignore="OnClick"/>
 
                 <View
                     android:layout_width="match_parent"
@@ -391,7 +399,8 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/editText11"
                     android:layout_toRightOf="@+id/textView12"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    tools:ignore="OnClick"/>
 
                 <View
                     android:layout_width="match_parent"
@@ -416,7 +425,8 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/editText12"
                     android:layout_toRightOf="@+id/textView13"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    tools:ignore="OnClick"/>
 
                 <View
                     android:layout_width="match_parent"
@@ -441,7 +451,8 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/editText13"
                     android:layout_toRightOf="@+id/textView14"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    tools:ignore="OnClick"/>
 
                 <View
                     android:layout_width="match_parent"
@@ -466,7 +477,8 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/editText14"
                     android:layout_toRightOf="@+id/textView15"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    tools:ignore="OnClick"/>
 
                 <View
                     android:layout_width="match_parent"
@@ -491,7 +503,8 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/editText15"
                     android:layout_toRightOf="@+id/textView16"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    tools:ignore="OnClick"/>
 
                 <View
                     android:layout_width="match_parent"
