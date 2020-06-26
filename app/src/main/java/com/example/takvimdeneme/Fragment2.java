@@ -1,5 +1,6 @@
 package com.example.takvimdeneme;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,5 +47,11 @@ public class Fragment2 extends Fragment {
         });
 
         return view;
+    }
+
+    public void sendData(){
+        Intent intent = new Intent(getActivity(),EditActivity.class);
+       //intent.putExtra("GUN",textView1.getText().toString());
+       // startActivity(intent);
     }
 }

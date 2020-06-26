@@ -14,8 +14,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button button2;
-    private TextView textView1;
 
     public void gecis(Fragment fragment){
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
@@ -30,14 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
         gecis(new Fragment1());
 
-        //textView1 = findViewById(R.id.editText);
-        duzenle(textView1);
-    }
 
-    public void duzenle(View view){
-        Toast.makeText(getApplicationContext(),"True",Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(getApplicationContext(),EditActivity.class);
-        startActivity(intent);
     }
-
 }
