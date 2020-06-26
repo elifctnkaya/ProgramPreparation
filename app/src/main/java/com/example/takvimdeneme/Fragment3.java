@@ -1,10 +1,12 @@
 package com.example.takvimdeneme;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,6 +15,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 public class Fragment3 extends Fragment {
 
+    private TextView textView1;
+    private Button button;
     private Button buton1;
     private Button buton2;
 
@@ -27,6 +31,15 @@ public class Fragment3 extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment3,container,false);
+        textView1 = view.findViewById(R.id.textview);
+        button = view.findViewById(R.id.sayfaninTamami);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendData();
+            }
+        });
+
 
         buton1 = view.findViewById(R.id.buton1);
         buton2 = view.findViewById(R.id.buton2);
@@ -45,5 +58,12 @@ public class Fragment3 extends Fragment {
         });
 
         return view;
+    }
+
+    public void sendData(){
+        Intent intent = new Intent(getActivity(),EditActivity.class);
+        intent.putExtra("GUN",textView1.getText().toString());
+
+        startActivity(intent);
     }
 }

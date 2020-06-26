@@ -54,16 +54,6 @@ public class Fragment1 extends Fragment {
 
         textView1 = view.findViewById(R.id.textview);
         button = view.findViewById(R.id.sayfaninTamami);
-        textView8 = view.findViewById(R.id.editText);
-        buton2 = view.findViewById(R.id.buton2);
-        buton2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {       // Fragmen2'ye geç
-             //   Intent intent = new Intent(view.getContext(), Fragment2.class);
-              //  view.getContext().startActivity(intent);
-                gecis(new Fragment2());
-            }
-        });
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,10 +61,14 @@ public class Fragment1 extends Fragment {
             }
         });
 
+        buton2 = view.findViewById(R.id.buton2);
+        buton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    gecis(new Fragment2());
+            }
+        });
 
-
-       // VeriGonderme verigönderme =(VeriGonderme) getActivity();
-//hata almamak için deneme yorum satırı
         return view;
     }
 

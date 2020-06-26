@@ -6,14 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".EditActivity">
 
-    <EditText
-        android:id="@+id/baslik"
+    <TextView
+        android:id="@+id/gun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:textSize="50sp"
-        android:hint="GÜN - SAAT"/>
+        android:textStyle="bold"
+        android:textColor="@color/colorblack"
+        android:hint="GÜN"/>
 
     <EditText
         android:id="@+id/dersAdi"
@@ -21,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:layout_below="@+id/baslik"
+        android:layout_below="@+id/gun"
         android:hint="Ders Adı"/>
 
     <EditText

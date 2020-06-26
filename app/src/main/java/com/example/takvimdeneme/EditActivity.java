@@ -21,7 +21,7 @@ public class EditActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit);
 
-        textView = findViewById(R.id.baslik);
+        textView = findViewById(R.id.gun);
         editText1 = findViewById(R.id.dersAdi);
         editText2 = findViewById(R.id.hocaismi);
         button = findViewById(R.id.ekle);

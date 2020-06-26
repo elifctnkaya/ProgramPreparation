@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,8 +15,10 @@ import androidx.fragment.app.FragmentTransaction;
 
 public class Fragment2 extends Fragment {
 
+    private TextView textView1;
     private Button buton1;
     private Button buton2;
+    private Button button;
 
     public void gecis(Fragment fragment) {
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
@@ -30,8 +33,16 @@ public class Fragment2 extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment2, container, false);
 
+        textView1 = view.findViewById(R.id.textview);
         buton1 = view.findViewById(R.id.buton1);
         buton2 = view.findViewById(R.id.buton2);
+        button = view.findViewById(R.id.sayfaninTamami);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendData();
+            }
+        });
 
         buton1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,7 +62,8 @@ public class Fragment2 extends Fragment {
 
     public void sendData(){
         Intent intent = new Intent(getActivity(),EditActivity.class);
-       //intent.putExtra("GUN",textView1.getText().toString());
-       // startActivity(intent);
+        intent.putExtra("GUN",textView1.getText().toString());
+
+        startActivity(intent);
     }
 }
