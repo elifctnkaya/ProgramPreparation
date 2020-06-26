@@ -38,13 +38,13 @@ public class Fragment1 extends Fragment {
     private TextView textView00;
 
 
-/*
+
     public void gecis(Fragment fragment){
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frame, fragment);
         fragmentTransaction.commit();
     }
-*/
+
 
     @Nullable
     @Override
@@ -59,8 +59,9 @@ public class Fragment1 extends Fragment {
         buton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {       // Fragmen2'ye geç
-                Intent intent = new Intent(view.getContext(), Fragment2.class);
-                view.getContext().startActivity(intent);
+             //   Intent intent = new Intent(view.getContext(), Fragment2.class);
+              //  view.getContext().startActivity(intent);
+                gecis(new Fragment2());
             }
         });
         button.setOnClickListener(new View.OnClickListener() {
