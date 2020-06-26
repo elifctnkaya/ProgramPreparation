@@ -2,7 +2,6 @@ package com.example.takvimdeneme;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,10 +26,7 @@ public class EditActivity extends AppCompatActivity {
         editText2 = findViewById(R.id.hocaismi);
         button = findViewById(R.id.ekle);
         db_ekle(button);
-        //String gun = this.getIntent().getExtras().getString("GUN");
-        //textView.setText(gun);
-        Intent intent = getIntent();
-        String gun = intent.getStringExtra("GUN");
+        String gun = this.getIntent().getExtras().getString("GUN");
         textView.setText(gun);
     }
 
