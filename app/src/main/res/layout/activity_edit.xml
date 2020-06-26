@@ -10,12 +10,24 @@
         android:id="@+id/gun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="20dp"
-        android:textSize="50sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:textColor="@color/colorblack"
         android:hint="GÜN"/>
+    <TextView
+        android:id="@+id/saat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/gun"
+        android:layout_marginLeft="50dp"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        android:hint="SAAT"
+        android:textColor="@color/colorblack"
+        android:textStyle="bold"
+        tools:ignore="onClick"/>
 
     <EditText
         android:id="@+id/dersAdi"
