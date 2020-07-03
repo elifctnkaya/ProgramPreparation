@@ -3,6 +3,7 @@ package com.example.takvimdeneme;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -14,12 +15,13 @@ import android.widget.Toast;
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
 
 public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
-
+    private static final String LOG = "Veritabani";
     private TextView textView;
     private EditText editText1;
     private EditText editText2;
     private Button button;
     private TextView textView2;
+    private Veritabani database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +34,10 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         editText2 = findViewById(R.id.hocaismi);
         button = findViewById(R.id.ekle);
 
-        db_ekle(button);
+
         String gun = this.getIntent().getExtras().getString("GUN");
         textView.setText(gun);
-
+        //final String gunn = textView.getText().toString();
         //saatleri tablo seklinde gösteren kod
         textView2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,23 +49,28 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
             }
         });
 
-
         //database islemleri
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Database database = new Database(EditActivity.this);
-                database.VeriEkle(editText1.getText().toString(), editText2.getText().toString());
 
+                try {
+                    database = new Veritabani(getApplicationContext());
+                    boolean de = database.VeriEkle(textView.getText().toString(), textView2.getText().toString(), editText1.getText().toString(), editText2.getText().toString());
+                    if (de == true) {
+                        Toast.makeText(getApplicationContext(), "VERİ YÜKLENDİ", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(), "VERİ YÜKLENEMEDİ", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (Exception e) {
+                    Toast.makeText(getApplicationContext(), "HATA", Toast.LENGTH_SHORT).show();
+                }
+                textView2.setText("");
+                editText1.setText("");
+                editText2.setText("");
             }
+
         });
-
-
-
-    }
-
-    public void db_ekle(View view){
-        Toast.makeText(getApplicationContext(),"Eklendi",Toast.LENGTH_SHORT).show();
     }
 
     //saat secimi icin kod

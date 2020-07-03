@@ -55,5 +55,6 @@
         android:layout_below="@+id/hocaismi"
         android:layout_marginTop="20dp"
         android:text="DERSİ EKLE"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        />
 </RelativeLayout>
