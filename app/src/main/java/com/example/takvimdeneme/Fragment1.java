@@ -8,12 +8,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
+import java.util.List;
 
 public class Fragment1 extends Fragment {
 
@@ -36,6 +39,7 @@ public class Fragment1 extends Fragment {
     private TextView textView22;
     private TextView textView23;
     private TextView textView00;
+    private TextView editText;
 
 
 
@@ -60,6 +64,20 @@ public class Fragment1 extends Fragment {
                 sendData();
             }
         });
+        editText = view.findViewById(R.id.editText);
+
+
+                try{
+                    Database database = new Database(getContext());
+                    List<String> vVeriler = database.VeriListele();
+                    StringBuilder stringBuilder = new StringBuilder();
+                    stringBuilder.append(vVeriler);
+                    editText.setText(stringBuilder);
+                }
+                catch (Exception e){
+                    Toast.makeText(getContext(), "Hata", Toast.LENGTH_SHORT).show();
+                }
+
 
         buton2 = view.findViewById(R.id.buton2);
         buton2.setOnClickListener(new View.OnClickListener() {
@@ -70,6 +88,7 @@ public class Fragment1 extends Fragment {
         });
 
         return view;
+
     }
 
     public void sendData(){
@@ -78,6 +97,8 @@ public class Fragment1 extends Fragment {
 
         startActivity(intent);
     }
+
+
 
 
 }
