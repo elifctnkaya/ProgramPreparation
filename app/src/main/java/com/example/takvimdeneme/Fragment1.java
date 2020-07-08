@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -40,7 +41,7 @@ public class Fragment1 extends Fragment {
     private TextView textView23;
     private TextView textView00;
     private TextView editText;
-
+    private Database database;
 
 
     public void gecis(Fragment fragment){
@@ -66,18 +67,17 @@ public class Fragment1 extends Fragment {
         });
         editText = view.findViewById(R.id.editText);
 
-
-                try{
+               /* try{
                     Database database = new Database(getContext());
                     List<String> vVeriler = database.VeriListele();
                     StringBuilder stringBuilder = new StringBuilder();
                     stringBuilder.append(vVeriler);
                     editText.setText(stringBuilder);
+                    //System.out.println(stringBuilder);
                 }
                 catch (Exception e){
                     Toast.makeText(getContext(), "Hata", Toast.LENGTH_SHORT).show();
-                }
-
+                }*/
 
         buton2 = view.findViewById(R.id.buton2);
         buton2.setOnClickListener(new View.OnClickListener() {
