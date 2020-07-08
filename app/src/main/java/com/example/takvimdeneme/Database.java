@@ -28,10 +28,10 @@ public class Database extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean VeriEkle(String gunn, String saat, String ders, String hoca) {
+    public boolean VeriEkle(String gun, String saat, String ders, String hoca) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
-        cv.put("gun", gunn);
+        cv.put("gun", gun);
         cv.put("saat", saat);
         cv.put("ders", ders);
         cv.put("hoca", hoca);
@@ -44,7 +44,7 @@ public class Database extends SQLiteOpenHelper {
         }
     }
 
-  /*  public boolean VeriAra(String kelime){
+    public void VeriAra(String kelime){
         ArrayList<String> VeriArrayList = new ArrayList<>();
         String aa = null;
         SQLiteDatabase dbx =this.getWritableDatabase();
@@ -53,14 +53,16 @@ public class Database extends SQLiteOpenHelper {
             aa = (c.getString(c.getColumnIndex("ders")) + c.getString(c.getColumnIndex("hoca")));
             VeriArrayList.add(aa);
         }
-        boolean de = VeriArrayList.add(aa);
+        //return aa;
+        System.out.println(VeriArrayList);
+       /* boolean de = VeriArrayList.add(aa);
         if (de == true){
             return true;
         }
         else{
             return false;
-        }
-    }*/
+        }*/
+    }
 /*
     public List<String> VeriListele(){
         List<String> veriler = new ArrayList<String>();

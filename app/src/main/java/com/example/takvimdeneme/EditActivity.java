@@ -68,6 +68,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                     //boolean dd = database.VeriEkle();
                     if(dd == true){
                         Toast.makeText(getApplicationContext(),"Veri Yüklendi", Toast.LENGTH_SHORT).show();
+                        //VeriAra(zaman);
                     }
                     else{
                         Toast.makeText(getApplicationContext(),"Veri Yüklenemedi", Toast.LENGTH_SHORT).show();
@@ -79,7 +80,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                 editText1.setText("");
                 editText2.setText("");
 
-                String xx =textView.getText().toString();
+                /*String xx =textView.getText().toString();
                 switch (VeriAra(xx)){
                     case "PAZARTESİ":
                         gecis(new Fragment1());
@@ -90,8 +91,8 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                     default:
                         Toast.makeText(getApplicationContext(),"tekrar deneyin", Toast.LENGTH_SHORT).show();
 
-                }
-
+                }*/
+                //gecis(new Fragment1());
             }
         });
 

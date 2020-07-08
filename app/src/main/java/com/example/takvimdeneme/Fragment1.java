@@ -3,6 +3,7 @@ package com.example.takvimdeneme;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.SpannableString;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,7 +42,7 @@ public class Fragment1 extends Fragment {
     private TextView textView23;
     private TextView textView00;
     private TextView editText;
-    private Database database;
+
 
 
     public void gecis(Fragment fragment){
@@ -59,13 +60,28 @@ public class Fragment1 extends Fragment {
 
         textView1 = view.findViewById(R.id.textview);
         button = view.findViewById(R.id.sayfaninTamami);
+        editText = view.findViewById(R.id.editText);
+        buton2 = view.findViewById(R.id.buton2);
+        String gun = textView1.getText().toString();
+
+        Database database = new Database(getContext());
+        System.out.println("Sonuccc");
+        /*if(database.VeriAra(gun)){
+            System.out.println("Sonuc2: Veri Cagirildi");
+        }
+        else{
+            System.out.println("Sonuc3:::");
+        }*/
+
+        database.VeriAra(gun);
+
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 sendData();
             }
         });
-        editText = view.findViewById(R.id.editText);
 
                /* try{
                     Database database = new Database(getContext());
@@ -79,7 +95,6 @@ public class Fragment1 extends Fragment {
                     Toast.makeText(getContext(), "Hata", Toast.LENGTH_SHORT).show();
                 }*/
 
-        buton2 = view.findViewById(R.id.buton2);
         buton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
