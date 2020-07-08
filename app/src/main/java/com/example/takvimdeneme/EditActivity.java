@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.ContentValues;
-import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
+import android.provider.MediaStore;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +17,7 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.List;
+import java.util.ArrayList;
 
 
 public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
@@ -27,7 +27,6 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
     private EditText editText2;
     private Button button;
     private TextView textView2;
-    private TextView textView3;
     private Database database;
     private Fragment fragment;
 
@@ -41,7 +40,6 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         editText1 = findViewById(R.id.dersAdi);
         editText2 = findViewById(R.id.hocaismi);
         button = findViewById(R.id.ekle);
-        textView3 = findViewById(R.id.listele);
         String gun = this.getIntent().getExtras().getString("GUN");
         textView.setText(gun);
 
@@ -81,17 +79,41 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                 editText1.setText("");
                 editText2.setText("");
 
+                String xx =textView.getText().toString();
+                switch (VeriAra(xx)){
+                    case "PAZARTESİ":
+                        gecis(new Fragment1());
+                    case "SALI":
+                        gecis(new Fragment2());
+                    case "ÇARŞAMBA":
+                        gecis(new Fragment3());
+                    default:
+                        Toast.makeText(getApplicationContext(),"tekrar deneyin", Toast.LENGTH_SHORT).show();
+
+                }
+
             }
         });
 
     }
-/*
+
     public void gecis(Fragment fragment){
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frame,fragment);
         fragmentTransaction.commit();
-    }*/
+    }
 
+    public String VeriAra(String kelime){
+       // ArrayList<String> VeriArrayList = new ArrayList<>();
+        String aa = null;
+        SQLiteDatabase dbx =database.getWritableDatabase();
+        Cursor c = dbx.rawQuery("SELECT * FROM ProgramsTable WHERE gun like '%" + kelime+ "%'", null);
+        while (c.moveToNext()){
+            aa = (c.getString(c.getColumnIndex("ders")) + c.getString(c.getColumnIndex("hoca")));
+           // VeriArrayList.add(aa);
+        }
+        return aa;
+    }
     //saat secimi icin kod
     @Override
     public boolean onMenuItemClick(MenuItem item) {

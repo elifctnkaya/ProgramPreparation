@@ -44,7 +44,7 @@ public class Database extends SQLiteOpenHelper {
         }
     }
 
-    /*public long VeriAra(String kelime){
+  /*  public boolean VeriAra(String kelime){
         ArrayList<String> VeriArrayList = new ArrayList<>();
         String aa = null;
         SQLiteDatabase dbx =this.getWritableDatabase();
@@ -55,10 +55,10 @@ public class Database extends SQLiteOpenHelper {
         }
         boolean de = VeriArrayList.add(aa);
         if (de == true){
-            return 5;
+            return true;
         }
         else{
-            return 10;
+            return false;
         }
     }*/
 /*
