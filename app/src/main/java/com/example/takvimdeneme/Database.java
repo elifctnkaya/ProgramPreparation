@@ -19,12 +19,12 @@ public class Database extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-       db.execSQL("CREATE TABLE ProgramsTable (program_id INTEGER PRIMARY KEY AUTOINCREMENT , gun TEXT, saat TEXT, ders TEXT, hoca TEXT);");
+       db.execSQL("CREATE TABLE ProgramTable (id INTEGER PRIMARY KEY AUTOINCREMENT , gun TEXT, saat TEXT, ders TEXT, hoca TEXT);");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS ProgramsTable");
+        db.execSQL("DROP TABLE IF EXISTS ProgramTable");
         onCreate(db);
     }
 
@@ -35,7 +35,7 @@ public class Database extends SQLiteOpenHelper {
         cv.put("saat", saat);
         cv.put("ders", ders);
         cv.put("hoca", hoca);
-        long dd = db.insert("ProgramsTable", null, cv);
+        long dd = db.insert("ProgramTable", null, cv);
         db.close();
         if (dd == -1) {
             return false;
@@ -43,18 +43,38 @@ public class Database extends SQLiteOpenHelper {
             return true;
         }
     }
-
-    public void VeriAra(String kelime){
-        ArrayList<String> VeriArrayList = new ArrayList<>();
-        String aa = null;
-        SQLiteDatabase dbx =this.getWritableDatabase();
-        Cursor c = dbx.rawQuery("SELECT * FROM ProgramsTable WHERE gun like '%" + kelime+ "%'", null);
+    public ArrayList<ProgramTable>TumVeriler(){
+        ArrayList<ProgramTable> VerilerArrayList = new ArrayList<>();
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor c = db.rawQuery("SELECT * FROM ProgramTable" , null);
         while (c.moveToNext()){
-            aa = (c.getString(c.getColumnIndex("ders")) + c.getString(c.getColumnIndex("hoca")));
-            VeriArrayList.add(aa);
+            ProgramTable programTable = new ProgramTable(c.getInt(c.getColumnIndex("id"))
+                    , c.getString(c.getColumnIndex("gun"))
+                    , c.getString(c.getColumnIndex("saat"))
+                    , c.getString(c.getColumnIndex("ders"))
+                    , c.getString(c.getColumnIndex("hoca")));
+            VerilerArrayList.add(programTable);
         }
+        return VerilerArrayList;
+    }
+
+    public ArrayList<ProgramTable> VeriAra(String kelime){
+        ArrayList<ProgramTable> VeriArrayList = new ArrayList<>();
+        //String aa = null;
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor c = db.rawQuery("SELECT * FROM ProgramTable WHERE gun like '%"+kelime+"%'", null);
+        while (c.moveToNext()){
+            ProgramTable programTable = new ProgramTable(c.getString(c.getColumnIndex("ders")));
+            //VeriArrayList.add(c.getString(c.getColumnIndex("ders")));
+            //VeriArrayList.add(c.getString(c.getColumnIndex("hoca")));
+            /*aa = (c.getString(c.getColumnIndex("ders")) + c.getString(c.getColumnIndex("hoca")));
+            //VeriArrayList.add(aa);*/
+            VeriArrayList.add(programTable);
+        }
+        return VeriArrayList ;
         //return aa;
-        System.out.println(VeriArrayList);
+        //System.out.println(VeriArrayList);
+        //return VeriArrayList;
        /* boolean de = VeriArrayList.add(aa);
         if (de == true){
             return true;

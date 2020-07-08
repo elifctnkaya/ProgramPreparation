@@ -104,7 +104,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         fragmentTransaction.commit();
     }
 
-    public String VeriAra(String kelime){
+    /*public String VeriAra(String kelime){
        // ArrayList<String> VeriArrayList = new ArrayList<>();
         String aa = null;
         SQLiteDatabase dbx =database.getWritableDatabase();
@@ -114,7 +114,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
            // VeriArrayList.add(aa);
         }
         return aa;
-    }
+    }*/
     //saat secimi icin kod
     @Override
     public boolean onMenuItemClick(MenuItem item) {

@@ -18,6 +18,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Fragment1 extends Fragment {
@@ -72,9 +73,9 @@ public class Fragment1 extends Fragment {
         else{
             System.out.println("Sonuc3:::");
         }*/
-
-        database.VeriAra(gun);
-
+        //database.VeriAra(gun);
+        ArrayList<ProgramTable> gelenler = database.VeriAra(gun);
+        System.out.println(gelenler);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,7 +105,9 @@ public class Fragment1 extends Fragment {
 
         return view;
 
+
     }
+
 
     public void sendData(){
         Intent intent = new Intent(getActivity(),EditActivity.class);
@@ -112,6 +115,7 @@ public class Fragment1 extends Fragment {
 
         startActivity(intent);
     }
+
 
 
 
