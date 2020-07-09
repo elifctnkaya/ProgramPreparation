@@ -59,15 +59,38 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
             public void onClick(View v) {
                 try{
                     database = new Database(getApplicationContext());
-                    boolean dd = database.VeriEkle(textView.getText().toString(),textView2.getText().toString(),editText1.getText().toString(),editText2.getText().toString());
-                    //boolean dd = database.VeriEkle();
-                    if(dd == true){
-                        Toast.makeText(getApplicationContext(),"Veri Yüklendi", Toast.LENGTH_SHORT).show();
-                        //VeriAra(zaman);
+                    ////////////////////////////////////////////////
+                    int kontrol = 0;
+                    ArrayList<ProgramTable> gelenler = database.TumVeriler();
+                    for(ProgramTable e : gelenler) {
+                        String gunn = e.getGun();
+                        String saat = e.getSaat();
+                        String ders = e.getDers();
+                        String hoca = e.getHoca();
+
+                        System.out.println("Gün: " + gunn + " Saat: " + saat + " Ders: " + ders + " Hoca: " + hoca);
+                        if (gunn.contentEquals(textView.getText().toString()) && saat.contentEquals(textView2.getText().toString())) {
+
+                            kontrol = 1;
+                        }
                     }
-                    else{
-                        Toast.makeText(getApplicationContext(),"Veri Yüklenemedi", Toast.LENGTH_SHORT).show();
+                    if(kontrol == 1) {
+                        Toast.makeText(getApplicationContext(), "DOLU", Toast.LENGTH_LONG).show();
                     }
+                        else{
+                            boolean dd = database.VeriEkle(textView.getText().toString(),textView2.getText().toString(),editText1.getText().toString(),editText2.getText().toString());
+                            //boolean dd = database.VeriEkle();
+                            if(dd == true){
+                                Toast.makeText(getApplicationContext(),"Veri Yüklendi", Toast.LENGTH_SHORT).show();
+                                //VeriAra(zaman);
+                            }
+                            else{
+                                Toast.makeText(getApplicationContext(),"Veri Yüklenemedi", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+
+                    ////////////////////////////////////////////////
+
                 }catch (Exception e){
                     Toast.makeText(getApplicationContext(),"HATA", Toast.LENGTH_SHORT).show();
                 }
