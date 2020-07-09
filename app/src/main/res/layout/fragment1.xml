@@ -87,9 +87,14 @@
                     android:layout_height="40dp"
                     android:layout_marginTop="20dp"
                     android:layout_toRightOf="@+id/textView"
-                    android:inputType="text"
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorblack"
+                    android:textAlignment="center"
                     android:onClick="duzenle"
-                    tools:ignore="OnClick" />
+                    tools:ignore="OnClick"
+                    android:gravity="center_horizontal" />
 
                 <View
                     android:layout_width="match_parent"
