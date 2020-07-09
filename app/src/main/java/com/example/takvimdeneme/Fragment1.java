@@ -74,16 +74,10 @@ public class Fragment1 extends Fragment {
             System.out.println("Sonuc3:::");
         }*/
         //database.VeriAra(gun);
-        /*ArrayList<ProgramTable> gelenler = database.VeriAra(gun);
+        ArrayList<ProgramTable> gelenler = database.VeriAra(gun);
+        //System.out.println(gelenler);
         for(ProgramTable d : gelenler){
-            Log.e("DE",d.getDers());
-        }*/
-
-        ArrayList<ProgramTable> gelenler = database.TumVeriler();
-        for(ProgramTable e : gelenler){
-            String a = e.getDers();
-            String b = e.getSaat();
-            System.out.println("DE "+a);
+            Log.e(String.valueOf(d.getId()),d.getDers());
         }
 
 
