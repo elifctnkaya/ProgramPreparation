@@ -43,11 +43,6 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         String gun = this.getIntent().getExtras().getString("GUN");
         textView.setText(gun);
 
-        final String zaman = textView.getText().toString();
-        final String saat = textView2.getText().toString();
-        final String ders = editText1.getText().toString();
-        final String hoca = editText2.getText().toString();
-
         //saatleri tablo seklinde gösteren kod
         textView2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,7 +59,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
             public void onClick(View v) {
                 try{
                     database = new Database(getApplicationContext());
-                    boolean dd = database.VeriEkle(zaman,saat,ders,hoca);
+                    boolean dd = database.VeriEkle(textView.getText().toString(),textView2.getText().toString(),editText1.getText().toString(),editText2.getText().toString());
                     //boolean dd = database.VeriEkle();
                     if(dd == true){
                         Toast.makeText(getApplicationContext(),"Veri Yüklendi", Toast.LENGTH_SHORT).show();

@@ -45,6 +45,10 @@ public class ProgramTable {
         this.ders = ders;
     }
 
+    public String getHoca(){
+        return hoca;
+    }
+
     public void setHoca(String hoca){
         this.hoca = hoca;
     }
