@@ -26,6 +26,7 @@ public class Fragment1 extends Fragment {
     private Button buton2;
     private TextView textView1;
     private Button button;
+    private TextView aaa;
     private TextView textView8;
     private TextView textView10;
     private TextView textView11;
@@ -64,7 +65,7 @@ public class Fragment1 extends Fragment {
         editText = view.findViewById(R.id.editText);
         buton2 = view.findViewById(R.id.buton2);
         String gun = textView1.getText().toString();
-
+        aaa = view.findViewById(R.id.editText11);
         Database database = new Database(getContext());
         System.out.println("Sonuccc");
         /*if(database.VeriAra(gun)){
@@ -78,13 +79,22 @@ public class Fragment1 extends Fragment {
         for(ProgramTable d : gelenler){
             Log.e("DE",d.getDers());
         }*/
-
         ArrayList<ProgramTable> gelenler = database.TumVeriler();
         for(ProgramTable e : gelenler){
-            String a = e.getDers();
-            String b = e.getSaat();
-            System.out.println("DE "+a);
+            String gunn = e.getGun();
+            String saat = e.getSaat();
+            String ders = e.getDers();
+            String hoca = e.getHoca();
+
+            System.out.println("Gün: "+gunn+" Saat: "+saat+" Ders: "+ders+" Hoca: "+hoca);
+
+            switch (saat){
+                case "19.00":
+                    aaa.setText(ders);
+            }
         }
+
+
 
 
 
