@@ -44,9 +44,7 @@ public class ProgramTable {
     public void setDers(String ders){
         this.ders = ders;
     }
-    public String getHoca(){
-        return hoca;
-    }
+
     public void setHoca(String hoca){
         this.hoca = hoca;
     }
