@@ -112,6 +112,8 @@ public class Fragment1 extends Fragment {
             String hoca = e.getHoca();
 
             System.out.println("Gün: "+gunn+" Saat: "+saat+" Ders: "+ders+" Hoca: "+hoca);
+
+
             if(gunn.contentEquals("PAZARTESİ")){
                 switch (saat){
                     case "08.00":
@@ -167,6 +169,7 @@ public class Fragment1 extends Fragment {
                         break;
                 }
             }
+
         }
 
 
