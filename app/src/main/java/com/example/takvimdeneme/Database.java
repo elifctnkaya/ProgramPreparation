@@ -64,7 +64,11 @@ public class Database extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor c = db.rawQuery("SELECT * FROM ProgramTable WHERE gun like '%"+kelime+"%'", null);
         while (c.moveToNext()){
-            ProgramTable programTable = new ProgramTable(c.getString(c.getColumnIndex("ders")));
+            ProgramTable programTable = new ProgramTable(c.getInt(c.getColumnIndex("id"))
+                    , c.getString(c.getColumnIndex("gun"))
+                    , c.getString(c.getColumnIndex("saat"))
+                    , c.getString(c.getColumnIndex("ders"))
+                    , c.getString(c.getColumnIndex("hoca")));
             //VeriArrayList.add(c.getString(c.getColumnIndex("ders")));
             //VeriArrayList.add(c.getString(c.getColumnIndex("hoca")));
             /*aa = (c.getString(c.getColumnIndex("ders")) + c.getString(c.getColumnIndex("hoca")));

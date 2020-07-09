@@ -1,7 +1,6 @@
 package com.example.takvimdeneme;
 
-import java.io.Serializable;
-import java.util.ArrayList;
+
 
 public class ProgramTable {
 
@@ -11,7 +10,7 @@ public class ProgramTable {
     private String ders;
     private String hoca;
 
-    public ProgramTable(String ders){
+    public ProgramTable(){
 
     }
     public ProgramTable(int id, String gun, String saat, String ders, String hoca){

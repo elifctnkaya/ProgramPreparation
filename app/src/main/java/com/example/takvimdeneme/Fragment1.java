@@ -77,6 +77,8 @@ public class Fragment1 extends Fragment {
         ArrayList<ProgramTable> gelenler = database.VeriAra(gun);
         System.out.println(gelenler);
 
+
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
