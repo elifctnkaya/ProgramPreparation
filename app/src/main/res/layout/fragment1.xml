@@ -119,9 +119,14 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/editText"
                     android:layout_toRightOf="@+id/textView1"
-                    android:inputType="text"
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorblack"
+                    android:textAlignment="center"
                     android:onClick="duzenle"
-                    tools:ignore="OnClick" />
+                    tools:ignore="OnClick"
+                    android:gravity="center_horizontal" />
 
                 <View
                     android:layout_width="match_parent"
@@ -146,9 +151,14 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/editText1"
                     android:layout_toRightOf="@+id/textView2"
-                    android:inputType="text"
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorblack"
+                    android:textAlignment="center"
                     android:onClick="duzenle"
-                    tools:ignore="OnClick" />
+                    tools:ignore="OnClick"
+                    android:gravity="center_horizontal" />
 
                 <View
                     android:layout_width="match_parent"
@@ -173,9 +183,14 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/editText2"
                     android:layout_toRightOf="@+id/textView3"
-                    android:inputType="text"
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorblack"
+                    android:textAlignment="center"
                     android:onClick="duzenle"
-                    tools:ignore="OnClick" />
+                    tools:ignore="OnClick"
+                    android:gravity="center_horizontal" />
 
                 <View
                     android:layout_width="match_parent"
@@ -200,9 +215,14 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/editText3"
                     android:layout_toRightOf="@+id/textView4"
-                    android:inputType="text"
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorblack"
+                    android:textAlignment="center"
                     android:onClick="duzenle"
-                    tools:ignore="OnClick" />
+                    tools:ignore="OnClick"
+                    android:gravity="center_horizontal" />
 
                 <View
                     android:layout_width="match_parent"
@@ -227,9 +247,14 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/editText4"
                     android:layout_toRightOf="@+id/textView5"
-                    android:inputType="text"
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorblack"
+                    android:textAlignment="center"
                     android:onClick="duzenle"
-                    tools:ignore="OnClick" />
+                    tools:ignore="OnClick"
+                    android:gravity="center_horizontal" />
 
                 <View
                     android:layout_width="match_parent"
@@ -254,9 +279,14 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/editText5"
                     android:layout_toRightOf="@+id/textView6"
-                    android:inputType="text"
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorblack"
+                    android:textAlignment="center"
                     android:onClick="duzenle"
-                    tools:ignore="OnClick" />
+                    tools:ignore="OnClick"
+                    android:gravity="center_horizontal" />
 
                 <View
                     android:layout_width="match_parent"
@@ -281,9 +311,14 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/editText6"
                     android:layout_toRightOf="@+id/textView7"
-                    android:inputType="text"
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorblack"
+                    android:textAlignment="center"
                     android:onClick="duzenle"
-                    tools:ignore="OnClick" />
+                    tools:ignore="OnClick"
+                    android:gravity="center_horizontal" />
 
                 <View
                     android:layout_width="match_parent"
@@ -308,9 +343,14 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/editText7"
                     android:layout_toRightOf="@+id/textView8"
-                    android:inputType="text"
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorblack"
+                    android:textAlignment="center"
                     android:onClick="duzenle"
-                    tools:ignore="OnClick" />
+                    tools:ignore="OnClick"
+                    android:gravity="center_horizontal" />
 
                 <View
                     android:layout_width="match_parent"
@@ -335,9 +375,14 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/editText8"
                     android:layout_toRightOf="@+id/textView9"
-                    android:inputType="text"
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorblack"
+                    android:textAlignment="center"
                     android:onClick="duzenle"
-                    tools:ignore="OnClick" />
+                    tools:ignore="OnClick"
+                    android:gravity="center_horizontal" />
 
                 <View
                     android:layout_width="match_parent"
@@ -388,8 +433,14 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/editText10"
                     android:layout_toRightOf="@+id/textView11"
-                    android:inputType="text"
-                    tools:ignore="OnClick"/>
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorblack"
+                    android:textAlignment="center"
+                    android:onClick="duzenle"
+                    tools:ignore="OnClick"
+                    android:gravity="center_horizontal" />
 
                 <View
                     android:layout_width="match_parent"
@@ -414,8 +465,14 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/editText11"
                     android:layout_toRightOf="@+id/textView12"
-                    android:inputType="text"
-                    tools:ignore="OnClick"/>
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorblack"
+                    android:textAlignment="center"
+                    android:onClick="duzenle"
+                    tools:ignore="OnClick"
+                    android:gravity="center_horizontal" />
 
                 <View
                     android:layout_width="match_parent"
@@ -440,8 +497,14 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/editText12"
                     android:layout_toRightOf="@+id/textView13"
-                    android:inputType="text"
-                    tools:ignore="OnClick"/>
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorblack"
+                    android:textAlignment="center"
+                    android:onClick="duzenle"
+                    tools:ignore="OnClick"
+                    android:gravity="center_horizontal" />
 
                 <View
                     android:layout_width="match_parent"
@@ -466,8 +529,14 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/editText13"
                     android:layout_toRightOf="@+id/textView14"
-                    android:inputType="text"
-                    tools:ignore="OnClick"/>
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorblack"
+                    android:textAlignment="center"
+                    android:onClick="duzenle"
+                    tools:ignore="OnClick"
+                    android:gravity="center_horizontal" />
 
                 <View
                     android:layout_width="match_parent"
@@ -492,8 +561,14 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/editText14"
                     android:layout_toRightOf="@+id/textView15"
-                    android:inputType="text"
-                    tools:ignore="OnClick"/>
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorblack"
+                    android:textAlignment="center"
+                    android:onClick="duzenle"
+                    tools:ignore="OnClick"
+                    android:gravity="center_horizontal" />
 
                 <View
                     android:layout_width="match_parent"
@@ -518,8 +593,14 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/editText15"
                     android:layout_toRightOf="@+id/textView16"
-                    android:inputType="text"
-                    tools:ignore="OnClick"/>
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorblack"
+                    android:textAlignment="center"
+                    android:onClick="duzenle"
+                    tools:ignore="OnClick"
+                    android:gravity="center_horizontal" />
 
                 <View
                     android:layout_width="match_parent"
