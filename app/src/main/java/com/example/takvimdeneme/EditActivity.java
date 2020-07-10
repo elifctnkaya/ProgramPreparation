@@ -89,10 +89,9 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 System.out.println("EVET TIKLANDI");
-                                boolean ed = database.VeriEkle(x1, x2, x3, x4);
-
+                                boolean ed = database.VeriGuncelle(x1, x2, x3, x4);
                                 if(ed == true){
-                                    Toast.makeText(getApplicationContext(),"Veri Yüklendi", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(),"Veri Güncellendi", Toast.LENGTH_SHORT).show();
 
                                         switch (textView.getText().toString()) {
                                             case "PAZARTESİ":
@@ -120,7 +119,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                                         }
                                 }
                                 else{
-                                    Toast.makeText(getApplicationContext(),"Veri Yüklenemedi", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(),"Veri Güncellenmedi", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });

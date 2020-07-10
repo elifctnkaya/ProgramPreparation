@@ -59,6 +59,28 @@ public class Database extends SQLiteOpenHelper {
         return VerilerArrayList;
     }
 
+    public void VeriSil(String ders, String hoca){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete("ProgramTable", "ders=? and hoca=?", new String[]{ders, hoca});
+        db.close();
+    }
+    public boolean VeriGuncelle(String gun, String saat, String ders, String hoca){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put("gun",gun);
+        cv.put("saat",saat);
+        cv.put("ders", ders);
+        cv.put("hoca", hoca);
+        long xx = db.update("ProgramTable",cv, "gun=? and saat=? and ders=? and hoca=?", new String[]{gun,saat,ders,hoca});
+        db.close();
+        if(xx == -1){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+
     public ArrayList<ProgramTable> VeriAra(String kelime){
         ArrayList<ProgramTable> VeriArrayList = new ArrayList<>();
         //String aa = null;
