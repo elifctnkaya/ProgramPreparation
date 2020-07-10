@@ -29,7 +29,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
     private TextView textView;
     private EditText editText1;
     private EditText editText2;
-    private Button button;
+    private Button buttonekle;
     private Button buttonsil;
     private TextView textView2;
     private Database database;
@@ -44,9 +44,21 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         textView2 = findViewById(R.id.saat);
         editText1 = findViewById(R.id.dersAdi);
         editText2 = findViewById(R.id.hocaismi);
-        button = findViewById(R.id.ekle);
+        buttonekle = findViewById(R.id.ekle);
         buttonsil = findViewById(R.id.sil);
-        final String gun = this.getIntent().getExtras().getString("GUN");
+        //final String gun = this.getIntent().getExtras().getString("GUN");
+        //STATE KONTROL // EKLE - SİL
+        Bundle bundle = getIntent().getExtras();
+        final String gun = bundle.getString("GUN");
+        String state = bundle.getString("STATE");
+        if(state.contentEquals("EKLE")){
+            buttonsil.setVisibility(View.INVISIBLE);
+        }
+        if(state.contentEquals("SİL")){
+            buttonekle.setVisibility(View.INVISIBLE);
+        }
+
+        ////
         textView.setText(gun);
         final String gunn = textView.getText().toString();
         //saatleri tablo seklinde gösteren kod
@@ -60,7 +72,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
             }
         });
 
-        button.setOnClickListener(new View.OnClickListener() {
+        buttonekle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {

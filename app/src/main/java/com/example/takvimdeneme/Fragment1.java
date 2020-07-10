@@ -184,14 +184,14 @@ public class Fragment1 extends Fragment {
                 alertDialog.setPositiveButton("EKLE", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        sendData();
+                        ekleCalisti();
                     }
                 });
 
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        sendData();
+                        silCalisti();
                     }
                 });
                 alertDialog.create().show();
@@ -230,8 +230,21 @@ public class Fragment1 extends Fragment {
         startActivity(intent);
     }
 
+    public void ekleCalisti(){
+        Intent intent = new Intent(getActivity(),EditActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("GUN",textView1.getText().toString());
+        bundle.putString("STATE","EKLE");
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
 
-
-
-
+    public void silCalisti(){
+        Intent intent = new Intent(getActivity(),EditActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("GUN",textView1.getText().toString());
+        bundle.putString("STATE","SİL");
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
 }
