@@ -49,12 +49,29 @@
 
     <Button
         android:id="@+id/ekle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_toRightOf="@+id/sil"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="20dp"
         android:layout_below="@+id/hocaismi"
         android:layout_marginTop="20dp"
-        android:text="DERSİ EKLE"
+        android:text="EKLE"
         android:textStyle="bold"
+        android:background="#00FF55"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:id="@+id/sil"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/hocaismi"
+        android:background="#EE2128"
+        android:layout_marginTop="20dp"
+        android:text="SİL"
+        android:textStyle="bold"
+        android:visibility="invisible"
         />
 </RelativeLayout>

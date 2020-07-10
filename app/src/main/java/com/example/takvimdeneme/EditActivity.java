@@ -20,6 +20,7 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.net.SocketTimeoutException;
 import java.util.ArrayList;
 
 
@@ -88,12 +89,14 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                         alert.setPositiveButton("EVET", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                System.out.println("EVET TIKLANDI");
-                                boolean ed = database.VeriEkle(x1,x2,x3,x4);
-                                if(ed == true){
-                                    Toast.makeText(getApplicationContext(),"Veri Güncellendi", Toast.LENGTH_SHORT).show();
+                                System.out.println("VERİLER ::: " + x1 + x2 + x3 + x4);
+                                boolean ed = database.VeriEkle(x1, x2, x3, x4);
 
-                                        switch (textView.getText().toString()) {
+                                if(ed == true){
+                                    System.out.println("Ekrana Bas");
+                                    Toast.makeText(getApplicationContext(),"Veri Yüklendi", Toast.LENGTH_SHORT).show();
+                                    System.out.println("GUNNNNNN: " + x1);
+                                        switch (x1) {
                                             case "PAZARTESİ":
                                                 gecis(new Fragment1());
                                                 break;
@@ -138,24 +141,31 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                               Toast.makeText(getApplicationContext(), "Veri Yüklendi", Toast.LENGTH_SHORT).show();
                               switch (textView.getText().toString()) {
                                   case "PAZARTESİ":
+                                      System.out.println("PAZARTESİYE GEÇ");
                                       gecis(new Fragment1());
                                       break;
                                   case "SALI":
+                                      System.out.println("SALIYA GEÇ");
                                       gecis(new Fragment2());
                                       break;
                                   case "ÇARŞAMBA":
+                                      System.out.println("ÇARŞAMBAYA GEÇ");
                                       gecis(new Fragment3());
                                       break;
                                   case "PERŞEMBE":
+                                      System.out.println("PERŞEMBEYE GEÇ");
                                       gecis(new Fragment4());
                                       break;
                                   case "CUMA":
+                                      System.out.println("CUMAYA GEÇ");
                                       gecis(new Fragment5());
                                       break;
                                   case "CUMARTESİ":
+                                      System.out.println("CUMARTESİYE GEÇ");
                                       gecis(new Fragment6());
                                       break;
                                   case "PAZAR":
+                                      System.out.println("PAZARA GEÇ");
                                       gecis(new Fragment7());
                                       break;
 
@@ -187,7 +197,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frame,fragment);
         fragmentTransaction.commit();
-    }
+   }
 
     /*public String VeriAra(String kelime){
        // ArrayList<String> VeriArrayList = new ArrayList<>();
