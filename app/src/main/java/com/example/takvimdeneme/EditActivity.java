@@ -53,63 +53,58 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         String state = bundle.getString("STATE");
         if(state.contentEquals("EKLE")){
             buttonsil.setVisibility(View.INVISIBLE);
-        }
-        if(state.contentEquals("SİL")){
-            buttonekle.setVisibility(View.INVISIBLE);
-        }
 
-        ////
-        textView.setText(gun);
-        final String gunn = textView.getText().toString();
-        //saatleri tablo seklinde gösteren kod
-        textView2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PopupMenu popup = new PopupMenu(EditActivity.this, textView2);
-                popup.setOnMenuItemClickListener(EditActivity.this);
-                popup.inflate(R.menu.popup_menu);
-                popup.show();
-            }
-        });
+            textView.setText(gun);
+            final String gunn = textView.getText().toString();
+            //saatleri tablo seklinde gösteren kod
+            textView2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    PopupMenu popup = new PopupMenu(EditActivity.this, textView2);
+                    popup.setOnMenuItemClickListener(EditActivity.this);
+                    popup.inflate(R.menu.popup_menu);
+                    popup.show();
+                }
+            });
 
-        buttonekle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    database = new Database(getApplicationContext());
-                    final String x1 = textView.getText().toString();
-                    final String x2 = textView2.getText().toString();
-                    final String x3 = editText1.getText().toString();
-                    final String x4 = editText2.getText().toString();
-                    ////////////////////////////////////////////////
-                    final int[] kontrol = {0};
-                    ArrayList<ProgramTable> gelenler = database.TumVeriler();
-                    for (ProgramTable e : gelenler) {
-                        String gunn = e.getGun();
-                        String saat = e.getSaat();
-                        String ders = e.getDers();
-                        String hoca = e.getHoca();
+            buttonekle.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    try {
+                        database = new Database(getApplicationContext());
+                        final String x1 = textView.getText().toString();
+                        final String x2 = textView2.getText().toString();
+                        final String x3 = editText1.getText().toString();
+                        final String x4 = editText2.getText().toString();
+                        ////////////////////////////////////////////////
+                        final int[] kontrol = {0};
+                        ArrayList<ProgramTable> gelenler = database.TumVeriler();
+                        for (ProgramTable e : gelenler) {
+                            String gunn = e.getGun();
+                            String saat = e.getSaat();
+                            String ders = e.getDers();
+                            String hoca = e.getHoca();
 
-                        System.out.println("Gün: " + gunn + " Saat: " + saat + " Ders: " + ders + " Hoca: " + hoca);
-                        if (gunn.contentEquals(textView.getText().toString()) && saat.contentEquals(textView2.getText().toString())) {
-                            kontrol[0] = 1;
+                            System.out.println("Gün: " + gunn + " Saat: " + saat + " Ders: " + ders + " Hoca: " + hoca);
+                            if (gunn.contentEquals(textView.getText().toString()) && saat.contentEquals(textView2.getText().toString())) {
+                                kontrol[0] = 1;
+                            }
                         }
-                    }
-                    if (kontrol[0] == 1) {
-                        AlertDialog.Builder alert = new AlertDialog.Builder(EditActivity.this);
-                        alert.setTitle("Eklemek istediğiniz alan dolu");
-                        alert.setMessage("Eklemek istediğinize emin misiniz ?");
-                        alert.setIcon(R.drawable.unlem);
-                        alert.setPositiveButton("EVET", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                System.out.println("VERİLER ::: " + x1 + x2 + x3 + x4);
-                                boolean ed = database.VeriEkle(x1, x2, x3, x4);
+                        if (kontrol[0] == 1) {
+                            AlertDialog.Builder alert = new AlertDialog.Builder(EditActivity.this);
+                            alert.setTitle("Eklemek istediğiniz alan dolu");
+                            alert.setMessage("Eklemek istediğinize emin misiniz ?");
+                            alert.setIcon(R.drawable.unlem);
+                            alert.setPositiveButton("EVET", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    System.out.println("VERİLER ::: " + x1 + x2 + x3 + x4);
+                                    boolean ed = database.VeriEkle(x1, x2, x3, x4);
 
-                                if(ed == true){
-                                    System.out.println("Ekrana Bas");
-                                    Toast.makeText(getApplicationContext(),"Veri Yüklendi", Toast.LENGTH_SHORT).show();
-                                    System.out.println("GUNNNNNN: " + x1);
+                                    if(ed == true){
+                                        System.out.println("Ekrana Bas");
+                                        Toast.makeText(getApplicationContext(),"Veri Yüklendi", Toast.LENGTH_SHORT).show();
+                                        System.out.println("GUNNNNNN: " + x1);
                                         switch (x1) {
                                             case "PAZARTESİ":
                                                 gecis(new Fragment1());
@@ -134,76 +129,83 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                                                 break;
 
                                         }
+                                    }
+                                    else{
+                                        Toast.makeText(getApplicationContext(),"Veri Güncellenmedi", Toast.LENGTH_SHORT).show();
+                                    }
                                 }
-                                else{
-                                    Toast.makeText(getApplicationContext(),"Veri Güncellenmedi", Toast.LENGTH_SHORT).show();
+                            });
+                            alert.setNegativeButton("HAYIR", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Toast.makeText(getApplicationContext(), "Veri Eklenmedi", Toast.LENGTH_SHORT).show();
                                 }
-                            }
-                        });
-                        alert.setNegativeButton("HAYIR", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                Toast.makeText(getApplicationContext(), "Veri Eklenmedi", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-                        alert.create().show();
-                    }
-                    else{
-                          boolean dd = database.VeriEkle(textView.getText().toString(),textView2.getText().toString(),editText1.getText().toString(),editText2.getText().toString());
-                          //boolean dd = database.VeriEkle();
-                          if(dd == true) {
-                              Toast.makeText(getApplicationContext(), "Veri Yüklendi", Toast.LENGTH_SHORT).show();
-                              switch (textView.getText().toString()) {
-                                  case "PAZARTESİ":
-                                      System.out.println("PAZARTESİYE GEÇ");
-                                      gecis(new Fragment1());
-                                      break;
-                                  case "SALI":
-                                      System.out.println("SALIYA GEÇ");
-                                      gecis(new Fragment2());
-                                      break;
-                                  case "ÇARŞAMBA":
-                                      System.out.println("ÇARŞAMBAYA GEÇ");
-                                      gecis(new Fragment3());
-                                      break;
-                                  case "PERŞEMBE":
-                                      System.out.println("PERŞEMBEYE GEÇ");
-                                      gecis(new Fragment4());
-                                      break;
-                                  case "CUMA":
-                                      System.out.println("CUMAYA GEÇ");
-                                      gecis(new Fragment5());
-                                      break;
-                                  case "CUMARTESİ":
-                                      System.out.println("CUMARTESİYE GEÇ");
-                                      gecis(new Fragment6());
-                                      break;
-                                  case "PAZAR":
-                                      System.out.println("PAZARA GEÇ");
-                                      gecis(new Fragment7());
-                                      break;
+                            });
+                            alert.create().show();
+                        }
+                        else{
+                            boolean dd = database.VeriEkle(textView.getText().toString(),textView2.getText().toString(),editText1.getText().toString(),editText2.getText().toString());
+                            //boolean dd = database.VeriEkle();
+                            if(dd == true) {
+                                Toast.makeText(getApplicationContext(), "Veri Yüklendi", Toast.LENGTH_SHORT).show();
+                                switch (textView.getText().toString()) {
+                                    case "PAZARTESİ":
+                                        System.out.println("PAZARTESİYE GEÇ");
+                                        gecis(new Fragment1());
+                                        break;
+                                    case "SALI":
+                                        System.out.println("SALIYA GEÇ");
+                                        gecis(new Fragment2());
+                                        break;
+                                    case "ÇARŞAMBA":
+                                        System.out.println("ÇARŞAMBAYA GEÇ");
+                                        gecis(new Fragment3());
+                                        break;
+                                    case "PERŞEMBE":
+                                        System.out.println("PERŞEMBEYE GEÇ");
+                                        gecis(new Fragment4());
+                                        break;
+                                    case "CUMA":
+                                        System.out.println("CUMAYA GEÇ");
+                                        gecis(new Fragment5());
+                                        break;
+                                    case "CUMARTESİ":
+                                        System.out.println("CUMARTESİYE GEÇ");
+                                        gecis(new Fragment6());
+                                        break;
+                                    case "PAZAR":
+                                        System.out.println("PAZARA GEÇ");
+                                        gecis(new Fragment7());
+                                        break;
 
                               /*Intent intent = new Intent(EditActivity.this,MainActivity.class);
                               startActivity(intent);*/
-                                  //VeriAra(zaman);
-                              }
-                          }
-                          else{
-                               Toast.makeText(getApplicationContext(),"Veri Yüklenemedi", Toast.LENGTH_SHORT).show();
-                          }
+                                    //VeriAra(zaman);
+                                }
+                            }
+                            else{
+                                Toast.makeText(getApplicationContext(),"Veri Yüklenemedi", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+
+                        ////////////////////////////////////////////////
+
+                    }catch (Exception e){
+                        Toast.makeText(getApplicationContext(),"HATA", Toast.LENGTH_SHORT).show();
                     }
+                    textView2.setText("");
+                    editText1.setText("");
+                    editText2.setText("");
 
-                    ////////////////////////////////////////////////
-
-                }catch (Exception e){
-                    Toast.makeText(getApplicationContext(),"HATA", Toast.LENGTH_SHORT).show();
                 }
-                textView2.setText("");
-                editText1.setText("");
-                editText2.setText("");
+            });
+        }
+        if(state.contentEquals("SİL")){
+            buttonekle.setVisibility(View.INVISIBLE);
+        }
 
-            }
-        });
+        ////
+
 
     }
 
