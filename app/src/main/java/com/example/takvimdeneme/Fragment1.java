@@ -111,7 +111,7 @@ public class Fragment1 extends Fragment {
             String ders = e.getDers();
             String hoca = e.getHoca();
 
-            System.out.println("Gün: "+gunn+" Saat: "+saat+" Ders: "+ders+" Hoca: "+hoca);
+            //System.out.println("Gün: "+gunn+" Saat: "+saat+" Ders: "+ders+" Hoca: "+hoca);
 
 
             if(gunn.contentEquals("PAZARTESİ")){

@@ -43,6 +43,7 @@ public class Database extends SQLiteOpenHelper {
             return true;
         }
     }
+
     public ArrayList<ProgramTable>TumVeriler(){
         ArrayList<ProgramTable> VerilerArrayList = new ArrayList<>();
         SQLiteDatabase db = this.getWritableDatabase();

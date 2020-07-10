@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:ignore="OnClick">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -407,8 +408,14 @@
                     android:layout_height="40dp"
                     android:layout_below="@+id/editText9"
                     android:layout_toRightOf="@+id/textView10"
-                    android:inputType="text"
-                    tools:ignore="OnClick"/>
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorblack"
+                    android:textAlignment="center"
+                    android:onClick="duzenle"
+                    tools:ignore="OnClick"
+                    android:gravity="center_horizontal"/>
 
                 <View
                     android:layout_width="match_parent"

@@ -1,9 +1,12 @@
 package com.example.takvimdeneme;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -40,9 +43,9 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         editText1 = findViewById(R.id.dersAdi);
         editText2 = findViewById(R.id.hocaismi);
         button = findViewById(R.id.ekle);
-        String gun = this.getIntent().getExtras().getString("GUN");
+        final String gun = this.getIntent().getExtras().getString("GUN");
         textView.setText(gun);
-
+        final String gunn = textView.getText().toString();
         //saatleri tablo seklinde gösteren kod
         textView2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,12 +60,12 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try{
+                try {
                     database = new Database(getApplicationContext());
                     ////////////////////////////////////////////////
-                    int kontrol = 0;
+                    final int[] kontrol = {0};
                     ArrayList<ProgramTable> gelenler = database.TumVeriler();
-                    for(ProgramTable e : gelenler) {
+                    for (ProgramTable e : gelenler) {
                         String gunn = e.getGun();
                         String saat = e.getSaat();
                         String ders = e.getDers();
@@ -70,24 +73,72 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
 
                         System.out.println("Gün: " + gunn + " Saat: " + saat + " Ders: " + ders + " Hoca: " + hoca);
                         if (gunn.contentEquals(textView.getText().toString()) && saat.contentEquals(textView2.getText().toString())) {
+                            kontrol[0] = 1;
 
-                            kontrol = 1;
                         }
                     }
-                    if(kontrol == 1) {
-                        Toast.makeText(getApplicationContext(), "DOLU", Toast.LENGTH_LONG).show();
-                    }
-                        else{
-                            boolean dd = database.VeriEkle(textView.getText().toString(),textView2.getText().toString(),editText1.getText().toString(),editText2.getText().toString());
-                            //boolean dd = database.VeriEkle();
-                            if(dd == true){
-                                Toast.makeText(getApplicationContext(),"Veri Yüklendi", Toast.LENGTH_SHORT).show();
-                                //VeriAra(zaman);
+                    if (kontrol[0] == 1) {
+                        AlertDialog.Builder alert = new AlertDialog.Builder(EditActivity.this);
+                        alert.setTitle("Eklemek istediğiniz alan dolu");
+                        alert.setMessage("Eklemek istediğinize emin misiniz ?");
+                        alert.setIcon(R.drawable.unlem);
+                        alert.setPositiveButton("EVET", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                boolean ed = database.VeriEkle(textView.getText().toString(), textView2.getText().toString(), editText1.getText().toString(), editText2.getText().toString());
+                                if(ed == true){
+                                    Toast.makeText(getApplicationContext(),"Veri Yüklendi", Toast.LENGTH_SHORT).show();
+                                }
+                                else{
+                                    Toast.makeText(getApplicationContext(),"Veri Yüklenemedi", Toast.LENGTH_SHORT).show();
+                                }
                             }
-                            else{
-                                Toast.makeText(getApplicationContext(),"Veri Yüklenemedi", Toast.LENGTH_SHORT).show();
+                        });
+                        alert.setNegativeButton("HAYIR", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Toast.makeText(getApplicationContext(), "Veri Eklenmedi", Toast.LENGTH_SHORT).show();
                             }
-                        }
+                        });
+                        alert.create().show();
+                     }
+                      else{
+                          boolean dd = database.VeriEkle(textView.getText().toString(),textView2.getText().toString(),editText1.getText().toString(),editText2.getText().toString());
+                          //boolean dd = database.VeriEkle();
+                          if(dd == true) {
+                              Toast.makeText(getApplicationContext(), "Veri Yüklendi", Toast.LENGTH_SHORT).show();
+                              switch (textView.getText().toString()) {
+                                  case "PAZARTESİ":
+                                      gecis(new Fragment1());
+                                      break;
+                                  case "SALI":
+                                      gecis(new Fragment2());
+                                      break;
+                                  case "ÇARŞAMBA":
+                                      gecis(new Fragment3());
+                                      break;
+                                  case "PERŞEMBE":
+                                      gecis(new Fragment4());
+                                      break;
+                                  case "CUMA":
+                                      gecis(new Fragment5());
+                                      break;
+                                  case "CUMARTESİ":
+                                      gecis(new Fragment6());
+                                      break;
+                                  case "PAZAR":
+                                      gecis(new Fragment7());
+                                      break;
+
+                              /*Intent intent = new Intent(EditActivity.this,MainActivity.class);
+                              startActivity(intent);*/
+                                  //VeriAra(zaman);
+                              }
+                          }
+                          else{
+                               Toast.makeText(getApplicationContext(),"Veri Yüklenemedi", Toast.LENGTH_SHORT).show();
+                          }
+                      }
 
                     ////////////////////////////////////////////////
 
@@ -98,25 +149,12 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                 editText1.setText("");
                 editText2.setText("");
 
-                /*String xx =textView.getText().toString();
-                switch (VeriAra(xx)){
-                    case "PAZARTESİ":
-                        gecis(new Fragment1());
-                    case "SALI":
-                        gecis(new Fragment2());
-                    case "ÇARŞAMBA":
-                        gecis(new Fragment3());
-                    default:
-                        Toast.makeText(getApplicationContext(),"tekrar deneyin", Toast.LENGTH_SHORT).show();
-
-                }*/
-                //gecis(new Fragment1());
             }
         });
 
     }
 
-    public void gecis(Fragment fragment){
+   public void gecis(Fragment fragment){
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frame,fragment);
         fragmentTransaction.commit();
