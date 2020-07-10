@@ -87,6 +87,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                             public void onClick(DialogInterface dialog, int which) {
                                 System.out.println("EVET TIKLANDI");
                                 boolean ed = database.VeriEkle(textView.getText().toString(), textView2.getText().toString(), editText1.getText().toString(), editText2.getText().toString());
+
                                 if(ed == true){
                                     Toast.makeText(getApplicationContext(),"Veri Yüklendi", Toast.LENGTH_SHORT).show();
 
