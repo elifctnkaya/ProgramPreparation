@@ -74,7 +74,6 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                         System.out.println("Gün: " + gunn + " Saat: " + saat + " Ders: " + ders + " Hoca: " + hoca);
                         if (gunn.contentEquals(textView.getText().toString()) && saat.contentEquals(textView2.getText().toString())) {
                             kontrol[0] = 1;
-
                         }
                     }
                     if (kontrol[0] == 1) {
