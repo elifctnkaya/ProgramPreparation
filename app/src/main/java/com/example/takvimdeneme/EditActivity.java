@@ -89,7 +89,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 System.out.println("EVET TIKLANDI");
-                                boolean ed = database.VeriGuncelle(x1, x2, x3, x4);
+                                boolean ed = database.VeriEkle(x1,x2,x3,x4);
                                 if(ed == true){
                                     Toast.makeText(getApplicationContext(),"Veri Güncellendi", Toast.LENGTH_SHORT).show();
 
