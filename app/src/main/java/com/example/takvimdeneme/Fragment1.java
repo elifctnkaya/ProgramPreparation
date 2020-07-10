@@ -93,7 +93,7 @@ public class Fragment1 extends Fragment {
         de17 = view.findViewById(R.id.editText16);
 
         //
-
+        duzenle(de1);
         Database database = new Database(getContext());
 
         /*if(database.VeriAra(gun)){
@@ -122,7 +122,6 @@ public class Fragment1 extends Fragment {
                     case "08.00":
                         de1.setText(ders+"\n"+hoca);
                         de1.setBackgroundColor(Color.BLUE);
-                        de1.setPadding(10,10,10,10);
                         break;
                     case "09.00":
                         de2.setText(ders+"\n"+hoca);
@@ -192,7 +191,7 @@ public class Fragment1 extends Fragment {
             }
 
         }
-
+/*
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -217,7 +216,7 @@ public class Fragment1 extends Fragment {
 
             }
         });
-
+*/
                /* try{
                     Database database = new Database(getContext());
                     List<String> vVeriler = database.VeriListele();
@@ -265,5 +264,9 @@ public class Fragment1 extends Fragment {
         bundle.putString("STATE","SİL");
         intent.putExtras(bundle);
         startActivity(intent);
+    }
+
+    public void duzenle(View view){
+        Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
     }
 }

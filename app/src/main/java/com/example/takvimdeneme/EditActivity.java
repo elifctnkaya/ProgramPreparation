@@ -104,7 +104,6 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                                     if(ed == true){
                                         System.out.println("Ekrana Bas");
                                         Toast.makeText(getApplicationContext(),"Veri Yüklendi", Toast.LENGTH_SHORT).show();
-                                        System.out.println("GUNNNNNN: " + x1);
                                         switch (x1) {
                                             case "PAZARTESİ":
                                                 gecis(new Fragment1());
