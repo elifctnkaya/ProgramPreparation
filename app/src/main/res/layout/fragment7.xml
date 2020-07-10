@@ -31,7 +31,7 @@
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"
-            android:background="@drawable/butonn1"/>
+            android:background="@drawable/new2_buttonleft"/>
 
 
     </RelativeLayout>
