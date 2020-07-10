@@ -1,5 +1,7 @@
 package com.example.takvimdeneme;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -146,7 +148,23 @@ public class Fragment7 extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendData();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("EKLE YA DA SİL");
+                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setPositiveButton("EKLE", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        sendData();
+                    }
+                });
+
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        sendData();
+                    }
+                });
+                alertDialog.create().show();
             }
         });
 

@@ -30,6 +30,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
     private EditText editText1;
     private EditText editText2;
     private Button button;
+    private Button buttonsil;
     private TextView textView2;
     private Database database;
     private Fragment fragment;
@@ -44,6 +45,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         editText1 = findViewById(R.id.dersAdi);
         editText2 = findViewById(R.id.hocaismi);
         button = findViewById(R.id.ekle);
+        buttonsil = findViewById(R.id.sil);
         final String gun = this.getIntent().getExtras().getString("GUN");
         textView.setText(gun);
         final String gunn = textView.getText().toString();

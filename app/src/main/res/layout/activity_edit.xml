@@ -54,12 +54,13 @@
         android:layout_toRightOf="@+id/sil"
         android:layout_marginLeft="120dp"
         android:layout_marginRight="20dp"
+        android:layout_toEndOf="@+id/sil"
         android:layout_below="@+id/hocaismi"
         android:layout_marginTop="20dp"
         android:text="EKLE"
         android:textStyle="bold"
         android:background="#00FF55"
-        android:visibility="invisible"
+        android:visibility="visible"
         />
 
     <Button
@@ -72,6 +73,6 @@
         android:layout_marginTop="20dp"
         android:text="SİL"
         android:textStyle="bold"
-        android:visibility="invisible"
+        android:visibility="visible"
         />
 </RelativeLayout>
