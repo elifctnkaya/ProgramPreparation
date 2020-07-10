@@ -9,6 +9,7 @@ import android.widget.Button;
 
 public class StartActivity extends AppCompatActivity {
 
+    //positionindeterminete
     private Button anasayfa;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

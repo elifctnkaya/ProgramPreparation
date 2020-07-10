@@ -62,6 +62,10 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
             public void onClick(View v) {
                 try {
                     database = new Database(getApplicationContext());
+                    final String x1 = textView.getText().toString();
+                    final String x2 = textView2.getText().toString();
+                    final String x3 = editText1.getText().toString();
+                    final String x4 = editText2.getText().toString();
                     ////////////////////////////////////////////////
                     final int[] kontrol = {0};
                     ArrayList<ProgramTable> gelenler = database.TumVeriler();
@@ -85,34 +89,32 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 System.out.println("EVET TIKLANDI");
-                                boolean ed = database.VeriEkle(textView.getText().toString(), textView2.getText().toString(), editText1.getText().toString(), editText2.getText().toString());
+                                boolean ed = database.VeriEkle(x1, x2, x3, x4);
 
                                 if(ed == true){
                                     Toast.makeText(getApplicationContext(),"Veri Yüklendi", Toast.LENGTH_SHORT).show();
 
                                         switch (textView.getText().toString()) {
                                             case "PAZARTESİ":
-                                                System.out.println("PAZARTESİYE GEÇ");
-                                                //gecis(new Fragment1());
+                                                gecis(new Fragment1());
                                                 break;
                                             case "SALI":
-                                                System.out.println("SALIYA GEÇ");
-                                                //gecis(new Fragment2());
+                                                gecis(new Fragment2());
                                                 break;
                                             case "ÇARŞAMBA":
-                                                //gecis(new Fragment3());
+                                                gecis(new Fragment3());
                                                 break;
                                             case "PERŞEMBE":
-                                                //gecis(new Fragment4());
+                                                gecis(new Fragment4());
                                                 break;
                                             case "CUMA":
-                                                //gecis(new Fragment5());
+                                                gecis(new Fragment5());
                                                 break;
                                             case "CUMARTESİ":
-                                                //gecis(new Fragment6());
+                                                gecis(new Fragment6());
                                                 break;
                                             case "PAZAR":
-                                                //gecis(new Fragment7());
+                                                gecis(new Fragment7());
                                                 break;
 
                                         }
@@ -129,8 +131,8 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                             }
                         });
                         alert.create().show();
-                     }
-                      else{
+                    }
+                    else{
                           boolean dd = database.VeriEkle(textView.getText().toString(),textView2.getText().toString(),editText1.getText().toString(),editText2.getText().toString());
                           //boolean dd = database.VeriEkle();
                           if(dd == true) {
@@ -166,7 +168,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                           else{
                                Toast.makeText(getApplicationContext(),"Veri Yüklenemedi", Toast.LENGTH_SHORT).show();
                           }
-                      }
+                    }
 
                     ////////////////////////////////////////////////
 
