@@ -29,6 +29,7 @@ public class Fragment1 extends Fragment {
     private Button buton2;
     private TextView textView1;
     private Button button;
+
     //Saatler
     private TextView de1;
     private TextView de2;
@@ -48,13 +49,17 @@ public class Fragment1 extends Fragment {
     private TextView de16;
     private TextView de17;
     //
+
     private TextView editText;
+
+
 
     public void gecis(Fragment fragment){
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frame, fragment);
         fragmentTransaction.commit();
     }
+
 
     @Nullable
     @Override
@@ -86,6 +91,7 @@ public class Fragment1 extends Fragment {
         de15 = view.findViewById(R.id.editText14);
         de16 = view.findViewById(R.id.editText15);
         de17 = view.findViewById(R.id.editText16);
+
         //
 
         Database database = new Database(getContext());
@@ -109,6 +115,7 @@ public class Fragment1 extends Fragment {
             String hoca = e.getHoca();
 
             //System.out.println("Gün: "+gunn+" Saat: "+saat+" Ders: "+ders+" Hoca: "+hoca);
+
 
             if(gunn.contentEquals("PAZARTESİ")){
                 switch (saat){
@@ -185,19 +192,40 @@ public class Fragment1 extends Fragment {
 
         }
 
-        /*de1.setOnClickListener(new View.OnClickListener() {
+        de1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"calisti", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
             }
-        });*/
-        //duzenle(de1);
-        /*button.setOnClickListener(new View.OnClickListener() {
+        });
+        de1.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+
+        de2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                duzenle(de1);
+                Toast.makeText(getContext(),"de2 normal calisti", Toast.LENGTH_SHORT).show();
+            }
+        });
+        de2.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(getContext(),"de2 sil calisti", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+
+/*
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 //sendData();
-               *//* AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("EKLE YA DA SİL");
                 alertDialog.setIcon(R.drawable.uyari);
                 alertDialog.setPositiveButton("EKLE", new DialogInterface.OnClickListener() {
@@ -212,22 +240,12 @@ public class Fragment1 extends Fragment {
                         silCalisti();
                     }
                 });
-                alertDialog.create().show();*//*
+                alertDialog.create().show();
 
             }
-        });*/
+        });
+*/
 
-               /* try{
-                    Database database = new Database(getContext());
-                    List<String> vVeriler = database.VeriListele();
-                    StringBuilder stringBuilder = new StringBuilder();
-                    stringBuilder.append(vVeriler);
-                    editText.setText(stringBuilder);
-                    //System.out.println(stringBuilder);
-                }
-                catch (Exception e){
-                    Toast.makeText(getContext(), "Hata", Toast.LENGTH_SHORT).show();
-                }*/
 
         buton2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -264,7 +282,7 @@ public class Fragment1 extends Fragment {
         startActivity(intent);
     }
 
-
+/*
     public void duzenle(View view){
         //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
@@ -284,6 +302,6 @@ public class Fragment1 extends Fragment {
         });
         alertDialog.create().show();
 
-    }
+    }*/
 
 }
