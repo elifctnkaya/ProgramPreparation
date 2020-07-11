@@ -195,13 +195,23 @@ public class Fragment1 extends Fragment {
         de1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+                ekleCalisti();
             }
         });
         de1.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİL");
+                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti();
+                    }
+                });
+                alertDialog.create().show();
                 return false;
             }
         });
@@ -209,208 +219,368 @@ public class Fragment1 extends Fragment {
         de2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"de2 normal calisti", Toast.LENGTH_SHORT).show();
+                ekleCalisti();
             }
         });
         de2.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(getContext(),"de2 sil calisti", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİL");
+                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti();
+                    }
+                });
+                alertDialog.create().show();
                 return false;
             }
         });
         de3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"de3 normal calisti", Toast.LENGTH_SHORT).show();
+                ekleCalisti();
             }
         });
         de3.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(getContext(),"de3 sil calisti", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİL");
+                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti();
+                    }
+                });
+                alertDialog.create().show();
                 return false;
             }
         });
         de4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"de4 normal calisti", Toast.LENGTH_SHORT).show();
+                ekleCalisti();
             }
         });
         de4.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(getContext(),"de3 sil calisti", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİL");
+                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti();
+                    }
+                });
+                alertDialog.create().show();
                 return false;
             }
         });
         de5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+                ekleCalisti();
             }
         });
         de5.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİL");
+                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti();
+                    }
+                });
+                alertDialog.create().show();
                 return false;
             }
         });
         de6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+                ekleCalisti();
             }
         });
         de6.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİL");
+                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti();
+                    }
+                });
+                alertDialog.create().show();
                 return false;
             }
         });
         de7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+                ekleCalisti();
             }
         });
         de7.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİL");
+                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti();
+                    }
+                });
+                alertDialog.create().show();
                 return false;
             }
         });
         de8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+                ekleCalisti();
             }
         });
         de8.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİL");
+                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti();
+                    }
+                });
+                alertDialog.create().show();
                 return false;
             }
         });
         de9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+                ekleCalisti();
             }
         });
         de9.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİL");
+                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti();
+                    }
+                });
+                alertDialog.create().show();
                 return false;
             }
         });
         de10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+                ekleCalisti();
             }
         });
         de10.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİL");
+                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti();
+                    }
+                });
+                alertDialog.create().show();
                 return false;
             }
         });
         de11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+                ekleCalisti();
             }
         });
         de11.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİL");
+                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti();
+                    }
+                });
+                alertDialog.create().show();
                 return false;
             }
         });
         de12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+                ekleCalisti();
             }
         });
         de12.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİL");
+                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti();
+                    }
+                });
+                alertDialog.create().show();
                 return false;
             }
         });
         de13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+                ekleCalisti();
             }
         });
         de13.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİL");
+                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti();
+                    }
+                });
+                alertDialog.create().show();
                 return false;
             }
         });
         de14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+                ekleCalisti();
             }
         });
         de14.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİL");
+                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti();
+                    }
+                });
+                alertDialog.create().show();
                 return false;
             }
         });
         de15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+                ekleCalisti();
             }
         });
         de15.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİL");
+                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti();
+                    }
+                });
+                alertDialog.create().show();
                 return false;
             }
         });
         de16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+                ekleCalisti();
             }
         });
         de16.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİL");
+                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti();
+                    }
+                });
+                alertDialog.create().show();
                 return false;
             }
         });
         de17.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+                ekleCalisti();
             }
         });
         de17.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİL");
+                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti();
+                    }
+                });
+                alertDialog.create().show();
                 return false;
             }
         });

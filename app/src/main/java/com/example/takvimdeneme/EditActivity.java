@@ -204,6 +204,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         }
         if(state.contentEquals("SİL")){
             buttonekle.setVisibility(View.INVISIBLE);
+            textView.setText(gun);
         }
 
         ////
