@@ -205,7 +205,7 @@ public class Fragment1 extends Fragment {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİL");
-                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -229,7 +229,7 @@ public class Fragment1 extends Fragment {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİL");
-                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -252,7 +252,7 @@ public class Fragment1 extends Fragment {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİL");
-                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -275,7 +275,7 @@ public class Fragment1 extends Fragment {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİL");
-                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -298,7 +298,7 @@ public class Fragment1 extends Fragment {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİL");
-                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -321,7 +321,7 @@ public class Fragment1 extends Fragment {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİL");
-                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -344,7 +344,7 @@ public class Fragment1 extends Fragment {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİL");
-                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -367,7 +367,7 @@ public class Fragment1 extends Fragment {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİL");
-                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -390,7 +390,7 @@ public class Fragment1 extends Fragment {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİL");
-                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -413,7 +413,7 @@ public class Fragment1 extends Fragment {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİL");
-                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -436,7 +436,7 @@ public class Fragment1 extends Fragment {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİL");
-                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -459,7 +459,7 @@ public class Fragment1 extends Fragment {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİL");
-                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -482,7 +482,7 @@ public class Fragment1 extends Fragment {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİL");
-                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -505,7 +505,7 @@ public class Fragment1 extends Fragment {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİL");
-                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -528,7 +528,7 @@ public class Fragment1 extends Fragment {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİL");
-                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -551,7 +551,7 @@ public class Fragment1 extends Fragment {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİL");
-                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -574,7 +574,7 @@ public class Fragment1 extends Fragment {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİL");
-                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -594,7 +594,7 @@ public class Fragment1 extends Fragment {
                 //sendData();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("EKLE YA DA SİL");
-                alertDialog.setIcon(R.drawable.uyari);
+                alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setPositiveButton("EKLE", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -665,7 +665,7 @@ public class Fragment1 extends Fragment {
         //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
         alertDialog.setTitle("EKLE YA DA SİL");
-        alertDialog.setIcon(R.drawable.uyari);
+        alertDialog.setIcon(R.drawable.delete);
         alertDialog.setPositiveButton("EKLE", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
