@@ -90,6 +90,7 @@
                     android:textAlignment="center"
                     android:onClick="duzenle"
                     tools:ignore="OnClick"
+                    android:clickable="true"
                     android:gravity="center_horizontal" />
 
                 <View

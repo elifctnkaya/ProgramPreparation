@@ -104,7 +104,9 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                                     if(ed == true){
                                         System.out.println("Ekrana Bas");
                                         Toast.makeText(getApplicationContext(),"Veri Yüklendi", Toast.LENGTH_SHORT).show();
-                                        switch (x1) {
+                                        Intent intent = new Intent(EditActivity.this,MainActivity.class);
+                                        startActivity(intent);
+                                        /*switch (x1) {
                                             case "PAZARTESİ":
                                                 gecis(new Fragment1());
                                                 break;
@@ -127,7 +129,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                                                 gecis(new Fragment7());
                                                 break;
 
-                                        }
+                                        }*/
                                     }
                                     else{
                                         Toast.makeText(getApplicationContext(),"Veri Güncellenmedi", Toast.LENGTH_SHORT).show();
@@ -147,7 +149,9 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                             //boolean dd = database.VeriEkle();
                             if(dd == true) {
                                 Toast.makeText(getApplicationContext(), "Veri Yüklendi", Toast.LENGTH_SHORT).show();
-                                switch (textView.getText().toString()) {
+                                Intent intent = new Intent(EditActivity.this,MainActivity.class);
+                                startActivity(intent);
+                                /*switch (textView.getText().toString()) {
                                     case "PAZARTESİ":
                                         System.out.println("PAZARTESİYE GEÇ");
                                         gecis(new Fragment1());
@@ -177,10 +181,9 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                                         gecis(new Fragment7());
                                         break;
 
-                              /*Intent intent = new Intent(EditActivity.this,MainActivity.class);
-                              startActivity(intent);*/
+
                                     //VeriAra(zaman);
-                                }
+                                }*/
                             }
                             else{
                                 Toast.makeText(getApplicationContext(),"Veri Yüklenemedi", Toast.LENGTH_SHORT).show();

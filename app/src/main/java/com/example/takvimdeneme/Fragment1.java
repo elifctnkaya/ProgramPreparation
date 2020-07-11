@@ -93,7 +93,7 @@ public class Fragment1 extends Fragment {
         de17 = view.findViewById(R.id.editText16);
 
         //
-        duzenle(de1);
+
         Database database = new Database(getContext());
 
         /*if(database.VeriAra(gun)){
@@ -191,12 +191,14 @@ public class Fragment1 extends Fragment {
             }
 
         }
-/*
+
+        //duzenle(de1);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                duzenle(de1);
                 //sendData();
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+               /* AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("EKLE YA DA SİL");
                 alertDialog.setIcon(R.drawable.uyari);
                 alertDialog.setPositiveButton("EKLE", new DialogInterface.OnClickListener() {
@@ -212,11 +214,11 @@ public class Fragment1 extends Fragment {
                         silCalisti();
                     }
                 });
-                alertDialog.create().show();
+                alertDialog.create().show();*/
 
             }
         });
-*/
+
                /* try{
                     Database database = new Database(getContext());
                     List<String> vVeriler = database.VeriListele();
@@ -235,9 +237,7 @@ public class Fragment1 extends Fragment {
                     gecis(new Fragment2());
             }
         });
-
         return view;
-
 
     }
 
@@ -266,7 +266,26 @@ public class Fragment1 extends Fragment {
         startActivity(intent);
     }
 
+
     public void duzenle(View view){
-        Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+        alertDialog.setTitle("EKLE YA DA SİL");
+        alertDialog.setIcon(R.drawable.uyari);
+        alertDialog.setPositiveButton("EKLE", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                ekleCalisti();
+            }
+        });
+
+        alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                silCalisti();
+            }
+        });
+        alertDialog.create().show();
+
     }
 }
