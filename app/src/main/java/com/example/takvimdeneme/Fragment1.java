@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.text.SpannableString;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -195,7 +196,7 @@ public class Fragment1 extends Fragment {
         de1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ekleCalisti();
+                ekleCalisti("08.00");
             }
         });
         de1.setOnLongClickListener(new View.OnLongClickListener() {
@@ -208,7 +209,7 @@ public class Fragment1 extends Fragment {
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        silCalisti();
+                        silCalisti("08.00");
                     }
                 });
                 alertDialog.create().show();
@@ -219,7 +220,7 @@ public class Fragment1 extends Fragment {
         de2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ekleCalisti();
+                ekleCalisti("09.00");
             }
         });
         de2.setOnLongClickListener(new View.OnLongClickListener() {
@@ -232,7 +233,7 @@ public class Fragment1 extends Fragment {
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        silCalisti();
+                        silCalisti("09.00");
                     }
                 });
                 alertDialog.create().show();
@@ -242,7 +243,7 @@ public class Fragment1 extends Fragment {
         de3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ekleCalisti();
+                ekleCalisti("10.00");
             }
         });
         de3.setOnLongClickListener(new View.OnLongClickListener() {
@@ -255,7 +256,7 @@ public class Fragment1 extends Fragment {
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        silCalisti();
+                        silCalisti("10.00");
                     }
                 });
                 alertDialog.create().show();
@@ -265,7 +266,7 @@ public class Fragment1 extends Fragment {
         de4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ekleCalisti();
+                ekleCalisti("11.00");
             }
         });
         de4.setOnLongClickListener(new View.OnLongClickListener() {
@@ -278,7 +279,7 @@ public class Fragment1 extends Fragment {
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        silCalisti();
+                        silCalisti("11.00");
                     }
                 });
                 alertDialog.create().show();
@@ -288,7 +289,7 @@ public class Fragment1 extends Fragment {
         de5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ekleCalisti();
+                ekleCalisti("12.00");
             }
         });
         de5.setOnLongClickListener(new View.OnLongClickListener() {
@@ -301,7 +302,7 @@ public class Fragment1 extends Fragment {
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        silCalisti();
+                        //silCalisti();
                     }
                 });
                 alertDialog.create().show();
@@ -311,7 +312,7 @@ public class Fragment1 extends Fragment {
         de6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ekleCalisti();
+                ekleCalisti("13.00");
             }
         });
         de6.setOnLongClickListener(new View.OnLongClickListener() {
@@ -324,7 +325,7 @@ public class Fragment1 extends Fragment {
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        silCalisti();
+                        //silCalisti();
                     }
                 });
                 alertDialog.create().show();
@@ -334,7 +335,7 @@ public class Fragment1 extends Fragment {
         de7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ekleCalisti();
+                ekleCalisti("14.00");
             }
         });
         de7.setOnLongClickListener(new View.OnLongClickListener() {
@@ -347,7 +348,7 @@ public class Fragment1 extends Fragment {
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        silCalisti();
+                        //silCalisti();
                     }
                 });
                 alertDialog.create().show();
@@ -357,7 +358,7 @@ public class Fragment1 extends Fragment {
         de8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ekleCalisti();
+                ekleCalisti("15.00");
             }
         });
         de8.setOnLongClickListener(new View.OnLongClickListener() {
@@ -370,7 +371,7 @@ public class Fragment1 extends Fragment {
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        silCalisti();
+                        //silCalisti();
                     }
                 });
                 alertDialog.create().show();
@@ -380,7 +381,7 @@ public class Fragment1 extends Fragment {
         de9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ekleCalisti();
+                ekleCalisti("16.00");
             }
         });
         de9.setOnLongClickListener(new View.OnLongClickListener() {
@@ -393,7 +394,7 @@ public class Fragment1 extends Fragment {
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        silCalisti();
+                        //silCalisti();
                     }
                 });
                 alertDialog.create().show();
@@ -403,7 +404,7 @@ public class Fragment1 extends Fragment {
         de10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ekleCalisti();
+                ekleCalisti("17.00");
             }
         });
         de10.setOnLongClickListener(new View.OnLongClickListener() {
@@ -416,7 +417,7 @@ public class Fragment1 extends Fragment {
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        silCalisti();
+                        //silCalisti();
                     }
                 });
                 alertDialog.create().show();
@@ -426,7 +427,7 @@ public class Fragment1 extends Fragment {
         de11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ekleCalisti();
+                ekleCalisti("18.00");
             }
         });
         de11.setOnLongClickListener(new View.OnLongClickListener() {
@@ -439,7 +440,7 @@ public class Fragment1 extends Fragment {
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        silCalisti();
+                        //silCalisti();
                     }
                 });
                 alertDialog.create().show();
@@ -449,7 +450,7 @@ public class Fragment1 extends Fragment {
         de12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ekleCalisti();
+                ekleCalisti("19.00");
             }
         });
         de12.setOnLongClickListener(new View.OnLongClickListener() {
@@ -462,7 +463,7 @@ public class Fragment1 extends Fragment {
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        silCalisti();
+                        //silCalisti();
                     }
                 });
                 alertDialog.create().show();
@@ -472,7 +473,7 @@ public class Fragment1 extends Fragment {
         de13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ekleCalisti();
+                ekleCalisti("20.00");
             }
         });
         de13.setOnLongClickListener(new View.OnLongClickListener() {
@@ -485,7 +486,7 @@ public class Fragment1 extends Fragment {
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        silCalisti();
+                        //silCalisti();
                     }
                 });
                 alertDialog.create().show();
@@ -495,7 +496,7 @@ public class Fragment1 extends Fragment {
         de14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ekleCalisti();
+                ekleCalisti("21.00");
             }
         });
         de14.setOnLongClickListener(new View.OnLongClickListener() {
@@ -508,7 +509,7 @@ public class Fragment1 extends Fragment {
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        silCalisti();
+                        //silCalisti();
                     }
                 });
                 alertDialog.create().show();
@@ -518,7 +519,7 @@ public class Fragment1 extends Fragment {
         de15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ekleCalisti();
+                ekleCalisti("22.00");
             }
         });
         de15.setOnLongClickListener(new View.OnLongClickListener() {
@@ -531,7 +532,7 @@ public class Fragment1 extends Fragment {
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        silCalisti();
+                        //silCalisti();
                     }
                 });
                 alertDialog.create().show();
@@ -541,7 +542,7 @@ public class Fragment1 extends Fragment {
         de16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ekleCalisti();
+                ekleCalisti("23.00");
             }
         });
         de16.setOnLongClickListener(new View.OnLongClickListener() {
@@ -554,7 +555,7 @@ public class Fragment1 extends Fragment {
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        silCalisti();
+                        //silCalisti();
                     }
                 });
                 alertDialog.create().show();
@@ -564,7 +565,7 @@ public class Fragment1 extends Fragment {
         de17.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ekleCalisti();
+                ekleCalisti("00.00");
             }
         });
         de17.setOnLongClickListener(new View.OnLongClickListener() {
@@ -577,7 +578,7 @@ public class Fragment1 extends Fragment {
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        silCalisti();
+                        //silCalisti();
                     }
                 });
                 alertDialog.create().show();
@@ -603,7 +604,7 @@ public class Fragment1 extends Fragment {
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        silCalisti();
+                        //silCalisti();
                     }
                 });
                 alertDialog.create().show();
@@ -630,22 +631,33 @@ public class Fragment1 extends Fragment {
         startActivity(intent);
     }
 
-    public void ekleCalisti(){
+    public void ekleCalisti(String saat){
         Intent intent = new Intent(getActivity(),EditActivity.class);
         Bundle bundle = new Bundle();
         bundle.putString("GUN",textView1.getText().toString());
-        bundle.putString("STATE","EKLE");
+        bundle.putString("SAAT",saat);
+        //bundle.putString("STATE","EKLE");
         intent.putExtras(bundle);
         startActivity(intent);
     }
 
-    public void silCalisti(){
-        Intent intent = new Intent(getActivity(),EditActivity.class);
+    public void silCalisti(String saat){
+
+        Database sildb = new Database(getContext());
+        boolean dd = sildb.VeriSil(textView1.getText().toString(),saat);
+        if(dd == true){
+            Toast.makeText(getContext(),"Silme İşlemi Başarılı",Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(getActivity(),MainActivity.class);
+            startActivity(intent);
+        }else{
+            Toast.makeText(getContext(),"Başarısız",Toast.LENGTH_LONG).show();
+        }
+        
+        /*Intent intent = new Intent(getActivity(),EditActivity.class);
         Bundle bundle = new Bundle();
         bundle.putString("GUN",textView1.getText().toString());
-        bundle.putString("STATE","SİL");
         intent.putExtras(bundle);
-        startActivity(intent);
+        startActivity(intent);*/
     }
 
 /*
@@ -663,7 +675,7 @@ public class Fragment1 extends Fragment {
         alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                silCalisti();
+                //silCalisti();
             }
         });
         alertDialog.create().show();

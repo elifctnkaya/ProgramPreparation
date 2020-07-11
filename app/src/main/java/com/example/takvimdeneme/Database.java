@@ -59,9 +59,9 @@ public class Database extends SQLiteOpenHelper {
         return VerilerArrayList;
     }
 
-    public boolean VeriSil(String gun, String saat, String ders, String hoca){
+    public boolean VeriSil(String gun, String saat){
         SQLiteDatabase db = this.getWritableDatabase();
-        long delete = db.delete("ProgramTable", "gun=? and saat=? and ders=? and hoca=?", new String[]{ders, hoca});
+        long delete = db.delete("ProgramTable", "gun=? and saat=?", new String[]{gun,saat});
         db.close();
         if(delete == -1){
             return false;

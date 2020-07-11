@@ -47,15 +47,13 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         buttonekle = findViewById(R.id.ekle);
         buttonsil = findViewById(R.id.sil);
         //final String gun = this.getIntent().getExtras().getString("GUN");
-        //STATE KONTROL // EKLE - SİL
         Bundle bundle = getIntent().getExtras();
         final String gun = bundle.getString("GUN");
-        String state = bundle.getString("STATE");
-        if(state.contentEquals("EKLE")){
-            buttonsil.setVisibility(View.INVISIBLE);
+        String clock = bundle.getString("SAAT");
 
-            textView.setText(gun);
-            final String gunn = textView.getText().toString();
+        textView.setText(gun);
+        textView2.setText(clock);
+        final String gunn = textView.getText().toString();
             //saatleri tablo seklinde gösteren kod
             textView2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -201,11 +199,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
 
                 }
             });
-        }
-        if(state.contentEquals("SİL")){
-            buttonekle.setVisibility(View.INVISIBLE);
-            textView.setText(gun);
-        }
+
 
         ////
 
@@ -218,17 +212,6 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         fragmentTransaction.commit();
    }
 
-    /*public String VeriAra(String kelime){
-       // ArrayList<String> VeriArrayList = new ArrayList<>();
-        String aa = null;
-        SQLiteDatabase dbx =database.getWritableDatabase();
-        Cursor c = dbx.rawQuery("SELECT * FROM ProgramsTable WHERE gun like '%" + kelime+ "%'", null);
-        while (c.moveToNext()){
-            aa = (c.getString(c.getColumnIndex("ders")) + c.getString(c.getColumnIndex("hoca")));
-           // VeriArrayList.add(aa);
-        }
-        return aa;
-    }*/
     //saat secimi icin kod
     @Override
     public boolean onMenuItemClick(MenuItem item) {
