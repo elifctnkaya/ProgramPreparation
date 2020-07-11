@@ -29,7 +29,6 @@ public class Fragment1 extends Fragment {
     private Button buton2;
     private TextView textView1;
     private Button button;
-
     //Saatler
     private TextView de1;
     private TextView de2;
@@ -49,17 +48,13 @@ public class Fragment1 extends Fragment {
     private TextView de16;
     private TextView de17;
     //
-
     private TextView editText;
-
-
 
     public void gecis(Fragment fragment){
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frame, fragment);
         fragmentTransaction.commit();
     }
-
 
     @Nullable
     @Override
@@ -91,7 +86,6 @@ public class Fragment1 extends Fragment {
         de15 = view.findViewById(R.id.editText14);
         de16 = view.findViewById(R.id.editText15);
         de17 = view.findViewById(R.id.editText16);
-
         //
 
         Database database = new Database(getContext());
@@ -115,7 +109,6 @@ public class Fragment1 extends Fragment {
             String hoca = e.getHoca();
 
             //System.out.println("Gün: "+gunn+" Saat: "+saat+" Ders: "+ders+" Hoca: "+hoca);
-
 
             if(gunn.contentEquals("PAZARTESİ")){
                 switch (saat){
@@ -192,13 +185,19 @@ public class Fragment1 extends Fragment {
 
         }
 
+        /*de1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"calisti", Toast.LENGTH_SHORT).show();
+            }
+        });*/
         //duzenle(de1);
-        button.setOnClickListener(new View.OnClickListener() {
+        /*button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 duzenle(de1);
                 //sendData();
-               /* AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+               *//* AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("EKLE YA DA SİL");
                 alertDialog.setIcon(R.drawable.uyari);
                 alertDialog.setPositiveButton("EKLE", new DialogInterface.OnClickListener() {
@@ -207,17 +206,16 @@ public class Fragment1 extends Fragment {
                         ekleCalisti();
                     }
                 });
-
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         silCalisti();
                     }
                 });
-                alertDialog.create().show();*/
+                alertDialog.create().show();*//*
 
             }
-        });
+        });*/
 
                /* try{
                     Database database = new Database(getContext());
@@ -278,7 +276,6 @@ public class Fragment1 extends Fragment {
                 ekleCalisti();
             }
         });
-
         alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -288,4 +285,5 @@ public class Fragment1 extends Fragment {
         alertDialog.create().show();
 
     }
+
 }
