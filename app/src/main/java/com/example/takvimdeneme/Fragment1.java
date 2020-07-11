@@ -219,6 +219,202 @@ public class Fragment1 extends Fragment {
                 return false;
             }
         });
+        de3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"de3 normal calisti", Toast.LENGTH_SHORT).show();
+            }
+        });
+        de3.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(getContext(),"de3 sil calisti", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+        de4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"de4 normal calisti", Toast.LENGTH_SHORT).show();
+            }
+        });
+        de4.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(getContext(),"de3 sil calisti", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+        de5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+            }
+        });
+        de5.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+        de6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+            }
+        });
+        de6.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+        de7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+            }
+        });
+        de7.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+        de8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+            }
+        });
+        de8.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+        de9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+            }
+        });
+        de9.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+        de10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+            }
+        });
+        de10.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+        de11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+            }
+        });
+        de11.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+        de12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+            }
+        });
+        de12.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+        de13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+            }
+        });
+        de13.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+        de14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+            }
+        });
+        de14.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+        de15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+            }
+        });
+        de15.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+        de16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+            }
+        });
+        de16.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+        de17.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"de1 normal calisti", Toast.LENGTH_SHORT).show();
+            }
+        });
+        de17.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(getContext(),"de1 sil calisti", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+
 
 /*
         button.setOnClickListener(new View.OnClickListener() {
