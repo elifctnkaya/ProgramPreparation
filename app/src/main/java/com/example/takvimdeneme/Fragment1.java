@@ -51,6 +51,8 @@ public class Fragment1 extends Fragment {
     private TextView de17;
     //
 
+
+
     private TextView editText;
 
 
@@ -69,7 +71,7 @@ public class Fragment1 extends Fragment {
         final View view = inflater.inflate(R.layout.fragment1,container,false);
 
         textView1 = view.findViewById(R.id.textview);
-        button = view.findViewById(R.id.sayfaninTamami);
+        //button = view.findViewById(R.id.sayfaninTamami);
         //editText = view.findViewById(R.id.editText);
         buton2 = view.findViewById(R.id.buton2);
         String gun = textView1.getText().toString();
@@ -204,7 +206,7 @@ public class Fragment1 extends Fragment {
             public boolean onLongClick(View v) {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-                alertDialog.setTitle("SİL");
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
@@ -228,7 +230,7 @@ public class Fragment1 extends Fragment {
             public boolean onLongClick(View v) {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-                alertDialog.setTitle("SİL");
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
@@ -251,7 +253,7 @@ public class Fragment1 extends Fragment {
             public boolean onLongClick(View v) {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-                alertDialog.setTitle("SİL");
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
@@ -274,7 +276,7 @@ public class Fragment1 extends Fragment {
             public boolean onLongClick(View v) {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-                alertDialog.setTitle("SİL");
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
@@ -297,12 +299,12 @@ public class Fragment1 extends Fragment {
             public boolean onLongClick(View v) {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-                alertDialog.setTitle("SİL");
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //silCalisti();
+                        silCalisti("12.00");
                     }
                 });
                 alertDialog.create().show();
@@ -320,12 +322,12 @@ public class Fragment1 extends Fragment {
             public boolean onLongClick(View v) {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-                alertDialog.setTitle("SİL");
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //silCalisti();
+                        silCalisti("13.00");
                     }
                 });
                 alertDialog.create().show();
@@ -343,12 +345,12 @@ public class Fragment1 extends Fragment {
             public boolean onLongClick(View v) {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-                alertDialog.setTitle("SİL");
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //silCalisti();
+                        silCalisti("14.00");
                     }
                 });
                 alertDialog.create().show();
@@ -366,12 +368,12 @@ public class Fragment1 extends Fragment {
             public boolean onLongClick(View v) {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-                alertDialog.setTitle("SİL");
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //silCalisti();
+                        silCalisti("15.00");
                     }
                 });
                 alertDialog.create().show();
@@ -389,12 +391,12 @@ public class Fragment1 extends Fragment {
             public boolean onLongClick(View v) {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-                alertDialog.setTitle("SİL");
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //silCalisti();
+                        silCalisti("16.00");
                     }
                 });
                 alertDialog.create().show();
@@ -412,12 +414,12 @@ public class Fragment1 extends Fragment {
             public boolean onLongClick(View v) {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-                alertDialog.setTitle("SİL");
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //silCalisti();
+                        silCalisti("17.00");
                     }
                 });
                 alertDialog.create().show();
@@ -435,12 +437,12 @@ public class Fragment1 extends Fragment {
             public boolean onLongClick(View v) {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-                alertDialog.setTitle("SİL");
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //silCalisti();
+                        silCalisti("18.00");
                     }
                 });
                 alertDialog.create().show();
@@ -458,12 +460,12 @@ public class Fragment1 extends Fragment {
             public boolean onLongClick(View v) {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-                alertDialog.setTitle("SİL");
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //silCalisti();
+                        silCalisti("19.00");
                     }
                 });
                 alertDialog.create().show();
@@ -481,12 +483,12 @@ public class Fragment1 extends Fragment {
             public boolean onLongClick(View v) {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-                alertDialog.setTitle("SİL");
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //silCalisti();
+                        silCalisti("20.00");
                     }
                 });
                 alertDialog.create().show();
@@ -504,12 +506,12 @@ public class Fragment1 extends Fragment {
             public boolean onLongClick(View v) {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-                alertDialog.setTitle("SİL");
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //silCalisti();
+                        silCalisti("21.00");
                     }
                 });
                 alertDialog.create().show();
@@ -527,12 +529,12 @@ public class Fragment1 extends Fragment {
             public boolean onLongClick(View v) {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-                alertDialog.setTitle("SİL");
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //silCalisti();
+                        silCalisti("22.00");
                     }
                 });
                 alertDialog.create().show();
@@ -550,12 +552,12 @@ public class Fragment1 extends Fragment {
             public boolean onLongClick(View v) {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-                alertDialog.setTitle("SİL");
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //silCalisti();
+                        silCalisti("23.00");
                     }
                 });
                 alertDialog.create().show();
@@ -573,12 +575,12 @@ public class Fragment1 extends Fragment {
             public boolean onLongClick(View v) {
                 //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-                alertDialog.setTitle("SİL");
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
                 alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //silCalisti();
+                        silCalisti("00.00");
                     }
                 });
                 alertDialog.create().show();
@@ -650,7 +652,7 @@ public class Fragment1 extends Fragment {
             Intent intent = new Intent(getActivity(),MainActivity.class);
             startActivity(intent);
         }else{
-            Toast.makeText(getContext(),"Başarısız",Toast.LENGTH_LONG).show();
+            Toast.makeText(getContext(),"Silme İşlemi Başarısız",Toast.LENGTH_LONG).show();
         }
         
         /*Intent intent = new Intent(getActivity(),EditActivity.class);

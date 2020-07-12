@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -57,7 +58,7 @@ public class Fragment7 extends Fragment {
         View view = inflater.inflate(R.layout.fragment7,container,false);
 
         textView1 = view.findViewById(R.id.textview);
-        button = view.findViewById(R.id.sayfaninTamami);
+        //button = view.findViewById(R.id.sayfaninTamami);
 
         //Saat Tanımlamaları
         de1 = view.findViewById(R.id.editText);
@@ -163,7 +164,401 @@ public class Fragment7 extends Fragment {
             }
         }
 
-        button.setOnClickListener(new View.OnClickListener() {
+        de1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ekleCalisti("08.00");
+            }
+        });
+        de1.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
+                alertDialog.setIcon(R.drawable.delete);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti("08.00");
+                    }
+                });
+                alertDialog.create().show();
+                return false;
+            }
+        });
+
+        de2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ekleCalisti("09.00");
+            }
+        });
+        de2.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
+                alertDialog.setIcon(R.drawable.delete);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti("09.00");
+                    }
+                });
+                alertDialog.create().show();
+                return false;
+            }
+        });
+        de3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ekleCalisti("10.00");
+            }
+        });
+        de3.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
+                alertDialog.setIcon(R.drawable.delete);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti("10.00");
+                    }
+                });
+                alertDialog.create().show();
+                return false;
+            }
+        });
+        de4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ekleCalisti("11.00");
+            }
+        });
+        de4.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
+                alertDialog.setIcon(R.drawable.delete);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti("11.00");
+                    }
+                });
+                alertDialog.create().show();
+                return false;
+            }
+        });
+        de5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ekleCalisti("12.00");
+            }
+        });
+        de5.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
+                alertDialog.setIcon(R.drawable.delete);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti("12.00");
+                    }
+                });
+                alertDialog.create().show();
+                return false;
+            }
+        });
+        de6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ekleCalisti("13.00");
+            }
+        });
+        de6.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
+                alertDialog.setIcon(R.drawable.delete);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti("13.00");
+                    }
+                });
+                alertDialog.create().show();
+                return false;
+            }
+        });
+        de7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ekleCalisti("14.00");
+            }
+        });
+        de7.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
+                alertDialog.setIcon(R.drawable.delete);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti("14.00");
+                    }
+                });
+                alertDialog.create().show();
+                return false;
+            }
+        });
+        de8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ekleCalisti("15.00");
+            }
+        });
+        de8.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
+                alertDialog.setIcon(R.drawable.delete);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti("15.00");
+                    }
+                });
+                alertDialog.create().show();
+                return false;
+            }
+        });
+        de9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ekleCalisti("16.00");
+            }
+        });
+        de9.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
+                alertDialog.setIcon(R.drawable.delete);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti("16.00");
+                    }
+                });
+                alertDialog.create().show();
+                return false;
+            }
+        });
+        de10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ekleCalisti("17.00");
+            }
+        });
+        de10.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
+                alertDialog.setIcon(R.drawable.delete);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti("17.00");
+                    }
+                });
+                alertDialog.create().show();
+                return false;
+            }
+        });
+        de11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ekleCalisti("18.00");
+            }
+        });
+        de11.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
+                alertDialog.setIcon(R.drawable.delete);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti("18.00");
+                    }
+                });
+                alertDialog.create().show();
+                return false;
+            }
+        });
+        de12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ekleCalisti("19.00");
+            }
+        });
+        de12.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
+                alertDialog.setIcon(R.drawable.delete);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti("19.00");
+                    }
+                });
+                alertDialog.create().show();
+                return false;
+            }
+        });
+        de13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ekleCalisti("20.00");
+            }
+        });
+        de13.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
+                alertDialog.setIcon(R.drawable.delete);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti("20.00");
+                    }
+                });
+                alertDialog.create().show();
+                return false;
+            }
+        });
+        de14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ekleCalisti("21.00");
+            }
+        });
+        de14.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
+                alertDialog.setIcon(R.drawable.delete);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti("21.00");
+                    }
+                });
+                alertDialog.create().show();
+                return false;
+            }
+        });
+        de15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ekleCalisti("22.00");
+            }
+        });
+        de15.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
+                alertDialog.setIcon(R.drawable.delete);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti("22.00");
+                    }
+                });
+                alertDialog.create().show();
+                return false;
+            }
+        });
+        de16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ekleCalisti("23.00");
+            }
+        });
+        de16.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
+                alertDialog.setIcon(R.drawable.delete);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti("23.00");
+                    }
+                });
+                alertDialog.create().show();
+                return false;
+            }
+        });
+        de17.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ekleCalisti("00.00");
+            }
+        });
+        de17.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
+                alertDialog.setIcon(R.drawable.delete);
+                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        silCalisti("00.00");
+                    }
+                });
+                alertDialog.create().show();
+                return false;
+            }
+        });
+
+
+       /* button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
@@ -184,7 +579,7 @@ public class Fragment7 extends Fragment {
                 });
                 alertDialog.create().show();
             }
-        });
+        });*/
 
         buton1 = view.findViewById(R.id.buton1);
 
@@ -205,21 +600,26 @@ public class Fragment7 extends Fragment {
         startActivity(intent);
     }
 
-    public void ekleCalisti(){
+    public void ekleCalisti(String saat){
         Intent intent = new Intent(getActivity(),EditActivity.class);
         Bundle bundle = new Bundle();
         bundle.putString("GUN",textView1.getText().toString());
-        bundle.putString("STATE","EKLE");
+        bundle.putString("SAAT",saat);
+        //bundle.putString("STATE","EKLE");
         intent.putExtras(bundle);
         startActivity(intent);
     }
 
-    public void silCalisti(){
-        Intent intent = new Intent(getActivity(),EditActivity.class);
-        Bundle bundle = new Bundle();
-        bundle.putString("GUN",textView1.getText().toString());
-        bundle.putString("STATE","SİL");
-        intent.putExtras(bundle);
-        startActivity(intent);
+    public void silCalisti(String saat) {
+
+        Database sildb = new Database(getContext());
+        boolean dd = sildb.VeriSil(textView1.getText().toString(), saat);
+        if (dd == true) {
+            Toast.makeText(getContext(), "Silme İşlemi Başarılı", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(getActivity(), MainActivity.class);
+            startActivity(intent);
+        } else {
+            Toast.makeText(getContext(), "Silme İşlemi Başarısız", Toast.LENGTH_LONG).show();
+        }
     }
 }

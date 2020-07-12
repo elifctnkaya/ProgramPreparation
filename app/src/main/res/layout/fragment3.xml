@@ -60,15 +60,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2">
 
-                <Button
+                <!--<Button
                     android:id="@+id/sayfaninTamami"
                     android:layout_width="500dp"
                     android:layout_height="700dp"
                     android:layout_marginLeft="55dp"
                     android:layout_marginTop="15dp"
                     android:alpha = "0"
-
-                    />
+                    />-->
 
                 <TextView
                     android:id="@+id/textView"
