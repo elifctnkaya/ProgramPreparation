@@ -33,6 +33,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
     private TextView textView2;
     private Database database;
     private Fragment fragment;
+    private EditText editText3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
 
         textView = findViewById(R.id.gun);
         textView2 = findViewById(R.id.saat);
+        editText3 = findViewById(R.id.sinif);
         editText1 = findViewById(R.id.dersAdi);
         editText2 = findViewById(R.id.hocaismi);
         buttonekle = findViewById(R.id.ekle);
@@ -70,18 +72,21 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                         database = new Database(getApplicationContext());
                         final String x1 = textView.getText().toString();
                         final String x2 = textView2.getText().toString();
-                        final String x3 = editText1.getText().toString();
-                        final String x4 = editText2.getText().toString();
+                        final String x3 = editText3.getText().toString();
+                        final String x4 = editText1.getText().toString();
+                        final String x5 = editText2.getText().toString();
+
                         ////////////////////////////////////////////////
                         final int[] kontrol = {0};
                         ArrayList<ProgramTable> gelenler = database.TumVeriler();
                         for (ProgramTable e : gelenler) {
                             String gunn = e.getGun();
                             String saat = e.getSaat();
+                            String sinif = e.getSinif();
                             String ders = e.getDers();
                             String hoca = e.getHoca();
 
-                            System.out.println("Gün: " + gunn + " Saat: " + saat + " Ders: " + ders + " Hoca: " + hoca);
+                            System.out.println("Gün: " + gunn + " Saat: " + saat + "Sınıf: "+sinif+ " Ders: " + ders + " Hoca: " + hoca);
                             if (gunn.contentEquals(textView.getText().toString()) && saat.contentEquals(textView2.getText().toString())) {
                                 kontrol[0] = 1;
                             }
@@ -94,8 +99,8 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                             alert.setPositiveButton("EVET", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    System.out.println("VERİLER ::: " + x1 + x2 + x3 + x4);
-                                    boolean ed = database.VeriEkle(x1, x2, x3, x4);
+                                    System.out.println("VERİLER ::: " + x1 + x2 + x3 + x4 + x5);
+                                    boolean ed = database.VeriEkle(x1, x2, x3, x4,x5);
 
                                     if(ed == true){
                                         System.out.println("Ekrana Bas");
@@ -128,7 +133,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                                         }*/
                                     }
                                     else{
-                                        Toast.makeText(getApplicationContext(),"Veri Güncellenmedi", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(),"Veri Yüklenmedi", Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });
@@ -141,7 +146,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                             alert.create().show();
                         }
                         else{
-                            boolean dd = database.VeriEkle(textView.getText().toString(),textView2.getText().toString(),editText1.getText().toString(),editText2.getText().toString());
+                            boolean dd = database.VeriEkle(textView.getText().toString(),textView2.getText().toString(),editText3.getText().toString(),editText1.getText().toString(),editText2.getText().toString());
                             //boolean dd = database.VeriEkle();
                             if(dd == true) {
                                 Toast.makeText(getApplicationContext(), "Veri Yüklendi", Toast.LENGTH_SHORT).show();
@@ -191,7 +196,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                     }catch (Exception e){
                         Toast.makeText(getApplicationContext(),"HATA", Toast.LENGTH_SHORT).show();
                     }
-                    textView2.setText("");
+                    editText3.setText("");
                     editText1.setText("");
                     editText2.setText("");
 

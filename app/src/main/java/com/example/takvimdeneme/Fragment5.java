@@ -87,78 +87,79 @@ public class Fragment5 extends Fragment {
         for(ProgramTable e : gelenler){
             String gunn = e.getGun();
             String saat = e.getSaat();
+            String sinif = e.getSinif();
             String ders = e.getDers();
             String hoca = e.getHoca();
 
-            System.out.println("Gün: "+gunn+" Saat: "+saat+" Ders: "+ders+" Hoca: "+hoca);
+            System.out.println("Gün: "+gunn+" Saat: "+saat+ "Sınıf: " +sinif+ " Ders: "+ders+" Hoca: "+hoca);
             if(gunn.contentEquals("CUMA")){
                 switch (saat){
                     case "08.00":
-                        de1.setText(ders+"\n"+hoca);
+                        de1.setText(sinif + " " +ders+"\n"+hoca);
                         de1.setBackgroundColor(Color.BLUE);
                         break;
                     case "09.00":
-                        de2.setText(ders+"\n"+hoca);
+                        de2.setText(sinif + " " +ders+"\n"+hoca);
                         de2.setBackgroundColor(Color.BLUE);
                         break;
                     case "10.00":
-                        de3.setText(ders+"\n"+hoca);
+                        de3.setText(sinif + " " +ders+"\n"+hoca);
                         de3.setBackgroundColor(Color.BLUE);
                         break;
                     case "11.00":
-                        de4.setText(ders+"\n"+hoca);
+                        de4.setText(sinif + " " +ders+"\n"+hoca);
                         de4.setBackgroundColor(Color.BLUE);
                         break;
                     case "12.00":
-                        de5.setText(ders+"\n"+hoca);
+                        de5.setText(sinif + " " +ders+"\n"+hoca);
                         de5.setBackgroundColor(Color.BLUE);
                         break;
                     case "13.00":
-                        de6.setText(ders+"\n"+hoca);
+                        de6.setText(sinif + " " +ders+"\n"+hoca);
                         de6.setBackgroundColor(Color.BLUE);
                         break;
                     case "14.00":
-                        de7.setText(ders+"\n"+hoca);
+                        de7.setText(sinif + " " +ders+"\n"+hoca);
                         de7.setBackgroundColor(Color.BLUE);
                         break;
                     case "15.00":
-                        de8.setText(ders+"\n"+hoca);
+                        de8.setText(sinif + " " +ders+"\n"+hoca);
                         de8.setBackgroundColor(Color.BLUE);
                         break;
                     case "16.00":
-                        de9.setText(ders+"\n"+hoca);
+                        de9.setText(sinif + " " +ders+"\n"+hoca);
                         de9.setBackgroundColor(Color.BLUE);
                         break;
                     case "17.00":
-                        de10.setText(ders+"\n"+hoca);
+                        de10.setText(sinif + " " +ders+"\n"+hoca);
                         de10.setBackgroundColor(Color.BLUE);
                         break;
                     case "18.00":
-                        de11.setText(ders+"\n"+hoca);
+                        de11.setText(sinif + " " +ders+"\n"+hoca);
                         de11.setBackgroundColor(Color.BLUE);
                         break;
                     case "19.00":
-                        de12.setText(ders+"\n"+hoca);
+                        de12.setText(sinif + " " +ders+"\n"+hoca);
                         de12.setBackgroundColor(Color.BLUE);
                         break;
                     case "20.00":
-                        de13.setText(ders+"\n"+hoca);
+                        de13.setText(sinif + " " +ders+"\n"+hoca);
                         de13.setBackgroundColor(Color.BLUE);
                         break;
                     case "21.00":
-                        de14.setText(ders+"\n"+hoca);
+                        de14.setText(sinif + " " +ders+"\n"+hoca);
                         de14.setBackgroundColor(Color.BLUE);
                         break;
                     case "22.00":
-                        de15.setText(ders+"\n"+hoca);
+                        de15.setText(sinif + " " +ders+"\n"+hoca);
                         de15.setBackgroundColor(Color.BLUE);
                         break;
                     case "23.00":
-                        de16.setText(ders+"\n"+hoca);
+                        de16.setText(sinif + " " +ders+"\n"+hoca);
                         de16.setBackgroundColor(Color.BLUE);
                         break;
                     case "00.00":
-                        de17.setText(ders+"\n"+hoca);
+                        de17.setText(sinif + " " +ders+"\n"+hoca);
                         de17.setBackgroundColor(Color.BLUE);
                         break;
                 }

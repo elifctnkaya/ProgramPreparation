@@ -19,7 +19,7 @@ public class Database extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-       db.execSQL("CREATE TABLE ProgramTable (id INTEGER PRIMARY KEY AUTOINCREMENT , gun TEXT, saat TEXT, ders TEXT, hoca TEXT);");
+       db.execSQL("CREATE TABLE ProgramTable (id INTEGER PRIMARY KEY AUTOINCREMENT , gun TEXT, saat TEXT, sinif TEXT, ders TEXT, hoca TEXT);");
     }
 
     @Override
@@ -28,11 +28,12 @@ public class Database extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean VeriEkle(String gun, String saat, String ders, String hoca) {
+    public boolean VeriEkle(String gun, String saat, String sinif,String ders, String hoca) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put("gun", gun);
         cv.put("saat", saat);
+        cv.put("sinif", sinif);
         cv.put("ders", ders);
         cv.put("hoca", hoca);
         long dd = db.insert("ProgramTable", null, cv);
@@ -52,6 +53,7 @@ public class Database extends SQLiteOpenHelper {
             ProgramTable programTable = new ProgramTable(c.getInt(c.getColumnIndex("id"))
                     , c.getString(c.getColumnIndex("gun"))
                     , c.getString(c.getColumnIndex("saat"))
+                    , c.getString(c.getColumnIndex("sinif"))
                     , c.getString(c.getColumnIndex("ders"))
                     , c.getString(c.getColumnIndex("hoca")));
             VerilerArrayList.add(programTable);
@@ -71,14 +73,15 @@ public class Database extends SQLiteOpenHelper {
         }
 
     }
-    public boolean VeriGuncelle(String gun, String saat, String ders, String hoca){
+    public boolean VeriGuncelle(String gun, String saat, String sinif, String ders, String hoca){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put("gun",gun);
         cv.put("saat",saat);
+        cv.put("sinif",sinif);
         cv.put("ders", ders);
         cv.put("hoca", hoca);
-        long xx = db.update("ProgramTable",cv, "gun=? and saat=? and ders=? and hoca=?", new String[]{gun,saat,ders,hoca});
+        long xx = db.update("ProgramTable",cv, "gun=? and saat=? and sinif=? and ders=? and hoca=?", new String[]{gun,saat,sinif,ders,hoca});
         db.close();
         if(xx == -1){
             return false;
@@ -97,6 +100,7 @@ public class Database extends SQLiteOpenHelper {
             ProgramTable programTable = new ProgramTable(c.getInt(c.getColumnIndex("id"))
                     , c.getString(c.getColumnIndex("gun"))
                     , c.getString(c.getColumnIndex("saat"))
+                    , c.getString(c.getColumnIndex("sinif"))
                     , c.getString(c.getColumnIndex("ders"))
                     , c.getString(c.getColumnIndex("hoca")));
             //VeriArrayList.add(c.getString(c.getColumnIndex("ders")));

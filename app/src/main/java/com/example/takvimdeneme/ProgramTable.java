@@ -7,16 +7,17 @@ public class ProgramTable {
     private int id;
     private String gun;
     private String saat;
+    private String sinif;
     private String ders;
     private String hoca;
-
     public ProgramTable(){
 
     }
-    public ProgramTable(int id, String gun, String saat, String ders, String hoca){
+    public ProgramTable(int id, String gun, String saat, String sinif, String ders, String hoca){
         this.id = id;
         this.gun = gun;
         this.saat = saat;
+        this.sinif = sinif;
         this.ders = ders;
         this.hoca = hoca;
     }
@@ -37,6 +38,12 @@ public class ProgramTable {
     }
     public void setSaat(String saat){
         this.saat = saat;
+    }
+    public String getSinif(){
+        return sinif;
+    }
+    public void setSinif(String sinif){
+        this.sinif = sinif;
     }
     public String getDers(){
         return ders;
