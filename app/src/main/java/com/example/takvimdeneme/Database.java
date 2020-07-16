@@ -15,19 +15,24 @@ public class Database extends SQLiteOpenHelper {
 
     public Database(@Nullable Context context) {
         super(context, "Programs", null, 1);
+
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
        db.execSQL("CREATE TABLE ProgramTable (id INTEGER PRIMARY KEY AUTOINCREMENT , gun TEXT, saat TEXT, sinif TEXT, ders TEXT, hoca TEXT);");
+       db.execSQL("CREATE TABLE SinavTable (sinav_id INTEGER PRIMARY KEY AUTOINCREMENT , sinav_gun TEXT, sinav_saat TEXT, sinav_sinif TEXT, sinav_ders TEXT, sinav_hoca TEXT );");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS ProgramTable");
+        db.execSQL("DROP TABLE IF EXISTS SinavTable");
         onCreate(db);
     }
 
+
+    ///////////////DERS PROGRAMI İÇİN DATABASE
     public boolean VeriEkle(String gun, String saat, String sinif,String ders, String hoca) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -44,7 +49,6 @@ public class Database extends SQLiteOpenHelper {
             return true;
         }
     }
-
     public ArrayList<ProgramTable>TumVeriler(){
         ArrayList<ProgramTable> VerilerArrayList = new ArrayList<>();
         SQLiteDatabase db = this.getWritableDatabase();
@@ -60,7 +64,6 @@ public class Database extends SQLiteOpenHelper {
         }
         return VerilerArrayList;
     }
-
     public boolean VeriSil(String gun, String saat){
         SQLiteDatabase db = this.getWritableDatabase();
         long delete = db.delete("ProgramTable", "gun=? and saat=?", new String[]{gun,saat});
@@ -71,7 +74,6 @@ public class Database extends SQLiteOpenHelper {
         else{
             return true;
         }
-
     }
     public boolean VeriGuncelle(String gun, String saat, String sinif, String ders, String hoca){
         SQLiteDatabase db = this.getWritableDatabase();
@@ -90,49 +92,72 @@ public class Database extends SQLiteOpenHelper {
             return true;
         }
     }
+    ////////////////////////////////////////////////
 
-    public ArrayList<ProgramTable> VeriAra(String kelime){
-        ArrayList<ProgramTable> VeriArrayList = new ArrayList<>();
-        //String aa = null;
+    /////////SINAV PROGRAMI İÇİN DATABASE
+    public boolean SinavEkle(String sinav_gun, String sinav_saat, String sinav_sinif,String sinav_ders, String sinav_hoca) {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor c = db.rawQuery("SELECT * FROM ProgramTable WHERE gun like '%"+kelime+"%'", null);
-        while (c.moveToNext()){
-            ProgramTable programTable = new ProgramTable(c.getInt(c.getColumnIndex("id"))
-                    , c.getString(c.getColumnIndex("gun"))
-                    , c.getString(c.getColumnIndex("saat"))
-                    , c.getString(c.getColumnIndex("sinif"))
-                    , c.getString(c.getColumnIndex("ders"))
-                    , c.getString(c.getColumnIndex("hoca")));
-            //VeriArrayList.add(c.getString(c.getColumnIndex("ders")));
-            //VeriArrayList.add(c.getString(c.getColumnIndex("hoca")));
-            /*aa = (c.getString(c.getColumnIndex("ders")) + c.getString(c.getColumnIndex("hoca")));
-            //VeriArrayList.add(aa);*/
-            VeriArrayList.add(programTable);
-        }
-        return VeriArrayList ;
-        //return aa;
-        //System.out.println(VeriArrayList);
-        //return VeriArrayList;
-       /* boolean de = VeriArrayList.add(aa);
-        if (de == true){
+        ContentValues cv = new ContentValues();
+        cv.put("sinav_gun", sinav_gun);
+        cv.put("sinav_saat", sinav_saat);
+        cv.put("sinav_sinif", sinav_sinif);
+        cv.put("sinav_ders", sinav_ders);
+        cv.put("sinav_hoca", sinav_hoca);
+        long dd = db.insert("SinavTable", null, cv);
+        db.close();
+        if (dd == -1) {
+            return false;
+        } else {
             return true;
         }
-        else{
-            return false;
-        }*/
     }
-/*
-    public List<String> VeriListele(){
-        List<String> veriler = new ArrayList<String>();
-        SQLiteDatabase db = this.getReadableDatabase();
-        String[] sutunlar = {ROW_ID, ROW_GUN, ROW_SAAT, ROW_DERS, ROW_HOCA};
-        Cursor cursor = db.query(Programs_Table, sutunlar, null,null,null,null,null);
-        while (cursor.moveToNext()){
-            veriler.add(cursor.getString(3));
-            veriler.add(cursor.getString(4));
+
+    public ArrayList<SinavTable>SinavVerileri(){
+        ArrayList<SinavTable> SinavArrayList = new ArrayList<>();
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor c = db.rawQuery("SELECT * FROM SinavTable" , null);
+        while (c.moveToNext()){
+            SinavTable sinavTable = new SinavTable(c.getInt(c.getColumnIndex("sinav_id"))
+                    , c.getString(c.getColumnIndex("sinav_gun"))
+                    , c.getString(c.getColumnIndex("sinav_saat"))
+                    , c.getString(c.getColumnIndex("sinav_sinif"))
+                    , c.getString(c.getColumnIndex("sinav_ders"))
+                    , c.getString(c.getColumnIndex("sinav_hoca")));
+            SinavArrayList.add(sinavTable);
         }
-        return veriler;
-    }*/
+        return SinavArrayList;
+    }
+
+    public boolean SinavSil(String sinav_gun, String sinav_saat){
+        SQLiteDatabase db = this.getWritableDatabase();
+        long delete = db.delete("SinavTable", "sinav_gun=? and sinav_saat=?", new String[]{sinav_gun,sinav_saat});
+        db.close();
+        if(delete == -1){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+
+    public boolean SinavGuncelle(String sinav_gun, String sinav_saat, String sinav_sinif, String sinav_ders, String sinav_hoca){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put("sinav_gun",sinav_gun);
+        cv.put("sinav_saat",sinav_saat);
+        cv.put("sinav_sinif",sinav_sinif);
+        cv.put("sinav_ders", sinav_ders);
+        cv.put("sinav_hoca", sinav_hoca);
+        long yy = db.update("SinavTable",cv, "sinav_gun=? and sinav_saat=? and sinav_sinif=? and sinav_ders=? and sina_hoca=?", new String[]{sinav_gun,sinav_saat,sinav_sinif,sinav_ders,sinav_hoca});
+        db.close();
+        if(yy == -1){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+
 }
 
 

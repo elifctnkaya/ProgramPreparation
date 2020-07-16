@@ -107,30 +107,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                                         Toast.makeText(getApplicationContext(),"Veri Yüklendi", Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(EditActivity.this,MainActivity.class);
                                         startActivity(intent);
-                                        /*switch (x1) {
-                                            case "PAZARTESİ":
-                                                gecis(new Fragment1());
-                                                break;
-                                            case "SALI":
-                                                gecis(new Fragment2());
-                                                break;
-                                            case "ÇARŞAMBA":
-                                                gecis(new Fragment3());
-                                                break;
-                                            case "PERŞEMBE":
-                                                gecis(new Fragment4());
-                                                break;
-                                            case "CUMA":
-                                                gecis(new Fragment5());
-                                                break;
-                                            case "CUMARTESİ":
-                                                gecis(new Fragment6());
-                                                break;
-                                            case "PAZAR":
-                                                gecis(new Fragment7());
-                                                break;
 
-                                        }*/
                                     }
                                     else{
                                         Toast.makeText(getApplicationContext(),"Veri Yüklenmedi", Toast.LENGTH_SHORT).show();
@@ -152,39 +129,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                                 Toast.makeText(getApplicationContext(), "Veri Yüklendi", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(EditActivity.this,MainActivity.class);
                                 startActivity(intent);
-                                /*switch (textView.getText().toString()) {
-                                    case "PAZARTESİ":
-                                        System.out.println("PAZARTESİYE GEÇ");
-                                        gecis(new Fragment1());
-                                        break;
-                                    case "SALI":
-                                        System.out.println("SALIYA GEÇ");
-                                        gecis(new Fragment2());
-                                        break;
-                                    case "ÇARŞAMBA":
-                                        System.out.println("ÇARŞAMBAYA GEÇ");
-                                        gecis(new Fragment3());
-                                        break;
-                                    case "PERŞEMBE":
-                                        System.out.println("PERŞEMBEYE GEÇ");
-                                        gecis(new Fragment4());
-                                        break;
-                                    case "CUMA":
-                                        System.out.println("CUMAYA GEÇ");
-                                        gecis(new Fragment5());
-                                        break;
-                                    case "CUMARTESİ":
-                                        System.out.println("CUMARTESİYE GEÇ");
-                                        gecis(new Fragment6());
-                                        break;
-                                    case "PAZAR":
-                                        System.out.println("PAZARA GEÇ");
-                                        gecis(new Fragment7());
-                                        break;
 
-
-                                    //VeriAra(zaman);
-                                }*/
                             }
                             else{
                                 Toast.makeText(getApplicationContext(),"Veri Yüklenemedi", Toast.LENGTH_SHORT).show();

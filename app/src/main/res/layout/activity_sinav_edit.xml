@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SinavEditActivity">
+
+    <TextView
+        android:id="@+id/gun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorblack"
+        android:hint="GÜN"/>
+    <TextView
+        android:id="@+id/saat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/gun"
+        android:layout_marginLeft="50dp"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        android:hint="SAAT"
+        android:textColor="@color/colorblack"
+        android:textStyle="bold"
+        tools:ignore="onClick"/>
+
+    <EditText
+        android:id="@+id/sinif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/gun"
+        android:hint="Sınıf"/>
+
+    <EditText
+        android:id="@+id/dersAdi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/sinif"
+        android:hint="Ders Adı"/>
+
+    <EditText
+        android:id="@+id/hocaismi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/dersAdi"
+        android:hint="Dersi veren Öğretim Görevlisi"/>
+
+    <Button
+        android:id="@+id/ekle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/hocaismi"
+        android:layout_marginTop="20dp"
+        android:text="EKLE"
+        android:textStyle="bold"
+        android:background="#00FF55"
+        android:visibility="visible"
+        />
+
+
+</RelativeLayout>

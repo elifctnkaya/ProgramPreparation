@@ -12,17 +12,20 @@ import android.widget.Toast;
 public class StartActivity extends AppCompatActivity {
 
     //positionindeterminete
-    private Button anasayfa;
+    private Button dersprogram;
+    private Button sinavprogram;
     private ProgressDialog yukleme;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
         yukleme = new ProgressDialog(this);
-        anasayfa = findViewById(R.id.anasayfa);
+        dersprogram = findViewById(R.id.dersprogram);
+        sinavprogram = findViewById(R.id.sinavprogram);
 
-        anasayfa.setOnClickListener(new View.OnClickListener() {
+        dersprogram.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 yukleme.setTitle("Program Açılıyor");
@@ -31,6 +34,19 @@ public class StartActivity extends AppCompatActivity {
                 yukleme.show();
 
                 Intent intent = new Intent(StartActivity.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        sinavprogram.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                yukleme.setTitle("Program Açılıyor");
+                yukleme.setMessage("Lütfen Bekleyin");
+                yukleme.setCanceledOnTouchOutside(false);
+                yukleme.show();
+
+                Intent intent = new Intent(StartActivity.this,SinavMainActivity.class);
                 startActivity(intent);
             }
         });

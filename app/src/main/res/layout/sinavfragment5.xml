@@ -1,42 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     tools:ignore="OnClick">
 
     <RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingTop="30dp"
-    android:paddingBottom="20dp"
-    android:orientation="horizontal"
-    android:background="@color/colorblue">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:paddingBottom="20dp"
+        android:orientation="horizontal"
+        android:background="@color/colorblue">
 
-    <TextView
-        android:id="@+id/textview"
-        android:layout_marginLeft="160dp"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:textStyle="bold"
-        android:textColor="@color/colorblack"
-        android:text="PAZARTESİ"
-        android:paddingTop="10dp"
-        android:paddingLeft="15dp"/>
+        <TextView
+            android:id="@+id/textview"
+            android:layout_marginLeft="160dp"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorblack"
+            android:text="CUMA"
+            android:paddingTop="10dp"
+            android:paddingLeft="15dp"/>
+
+        <Button
+            android:id="@+id/buton1"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/new2_buttonleft"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:id="@+id/buton2"
+            android:layout_toRightOf="@+id/textview"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/new2_button"/>
 
 
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:id="@+id/buton2"
-        android:layout_toRightOf="@+id/textview"
-        android:layout_marginLeft="20dp"
-        android:background="@drawable/new2_button"/>
-
-
-</RelativeLayout>
+    </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -611,4 +616,5 @@
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
+
 </LinearLayout>

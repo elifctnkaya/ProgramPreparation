@@ -4,14 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StartActivity">
+    tools:context=".StartActivity"
+    android:background="@drawable/anasayfa">
 
     <Button
-        android:id="@+id/anasayfa"
+        android:id="@+id/dersprogram"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ANASAYFA"
-        android:layout_marginTop="50dp"
+        android:text="DERS PROGRAMI"
+        android:layout_marginTop="200dp"
         />
+
+    <Button
+        android:id="@+id/sinavprogram"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SINAV PROGRAMI"
+        android:layout_below="@+id/dersprogram"
+        android:layout_marginTop="20dp"/>
 
 </RelativeLayout>
