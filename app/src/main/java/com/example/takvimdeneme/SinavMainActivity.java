@@ -19,6 +19,7 @@ public class SinavMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sinav_main);
 
+        getSupportActionBar().setTitle("Sınav Programı");
         gecis(new SinavFragment1());
     }
 }
