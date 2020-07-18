@@ -110,7 +110,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
 
                                     }
                                     else{
-                                        Toast.makeText(getApplicationContext(),"Veri Yüklenmedi", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(),"Veri Güncellenmedi", Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });

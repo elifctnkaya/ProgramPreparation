@@ -106,17 +106,17 @@ public class SinavEditActivity extends AppCompatActivity implements PopupMenu.On
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 //System.out.println("VERİLER ::: " + x1 + x2 + x3 + x4 + x5);
-                                boolean ed = database.SinavEkle(x1, x2, x3, x4,x5);
+                                boolean ed = database.SinavGuncelle(x1, x2, x3, x4,x5);
 
                                 if(ed == true){
                                     System.out.println("Ekrana Bas");
-                                    Toast.makeText(getApplicationContext(),"Veri Yüklendi", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(),"Veri Güncellendi", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(SinavEditActivity.this,SinavMainActivity.class);
                                     startActivity(intent);
 
                                 }
                                 else{
-                                    Toast.makeText(getApplicationContext(),"Veri Yüklenmedi", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(),"Veri Güncellenmedi", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
