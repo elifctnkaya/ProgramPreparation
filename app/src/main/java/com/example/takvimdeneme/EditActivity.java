@@ -100,11 +100,11 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     System.out.println("VERİLER ::: " + x1 + x2 + x3 + x4 + x5);
-                                    boolean ed = database.VeriEkle(x1, x2, x3, x4,x5);
+                                    boolean ed = database.VeriGuncelle(x1, x2, x3, x4,x5);
 
                                     if(ed == true){
                                         System.out.println("Ekrana Bas");
-                                        Toast.makeText(getApplicationContext(),"Veri Yüklendi", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(),"Veri Güncellendi", Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(EditActivity.this,MainActivity.class);
                                         startActivity(intent);
 

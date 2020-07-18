@@ -83,7 +83,7 @@ public class Database extends SQLiteOpenHelper {
         cv.put("sinif",sinif);
         cv.put("ders", ders);
         cv.put("hoca", hoca);
-        long xx = db.update("ProgramTable",cv, "gun=? and saat=? and sinif=? and ders=? and hoca=?", new String[]{gun,saat,sinif,ders,hoca});
+        long xx = db.update("ProgramTable",cv, "gun=? and saat=? ", new String[]{gun,saat});
         db.close();
         if(xx == -1){
             return false;
@@ -148,7 +148,7 @@ public class Database extends SQLiteOpenHelper {
         cv.put("sinav_sinif",sinav_sinif);
         cv.put("sinav_ders", sinav_ders);
         cv.put("sinav_hoca", sinav_hoca);
-        long yy = db.update("SinavTable",cv, "sinav_gun=? and sinav_saat=? and sinav_sinif=? and sinav_ders=? and sina_hoca=?", new String[]{sinav_gun,sinav_saat,sinav_sinif,sinav_ders,sinav_hoca});
+        long yy = db.update("SinavTable",cv, "sinav_gun=? and sinav_saat=?", new String[]{sinav_gun,sinav_saat});
         db.close();
         if(yy == -1){
             return false;
