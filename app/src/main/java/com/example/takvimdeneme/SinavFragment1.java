@@ -95,7 +95,7 @@ public class SinavFragment1 extends Fragment {
             if (gunn.contentEquals("PAZARTESİ")) {
                 switch (saat) {
                     case "08.00":
-                        de1.setText(sinif + "\n" + ders + "-" + hoca);
+                        de1.setText(sinif + "\n" + ders + "-\n" + hoca);
                         de1.setBackgroundColor(Color.rgb(123,86,198));
                         break;
                     case "09.00":
