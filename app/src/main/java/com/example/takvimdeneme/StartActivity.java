@@ -34,7 +34,7 @@ public class StartActivity extends AppCompatActivity {
                 yukleme.show();
 
                 Intent intent = new Intent(StartActivity.this,MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 finish();
             }
@@ -49,7 +49,7 @@ public class StartActivity extends AppCompatActivity {
                 yukleme.show();
 
                 Intent intent = new Intent(StartActivity.this,SinavMainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 finish();
             }
