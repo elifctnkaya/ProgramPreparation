@@ -27,7 +27,7 @@ public class SinavEditActivity extends AppCompatActivity implements PopupMenu.On
     private TextView textView2;
     private Database database;
     private Fragment fragment;
-    private EditText editText3;
+    private TextView textView3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class SinavEditActivity extends AppCompatActivity implements PopupMenu.On
 
         textView = findViewById(R.id.gun);
         textView2 = findViewById(R.id.saat);
-        editText3 = findViewById(R.id.sinif);
+        textView3 = findViewById(R.id.sinif);
         editText1 = findViewById(R.id.dersAdi);
         editText2 = findViewById(R.id.hocaismi);
         buttonekle = findViewById(R.id.ekle);
@@ -59,6 +59,18 @@ public class SinavEditActivity extends AppCompatActivity implements PopupMenu.On
             }
         });
 
+        ////Sınıfların Gösterilmesi
+        textView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupMenu sinifPopup = new PopupMenu(SinavEditActivity.this, textView3);
+                sinifPopup.setOnMenuItemClickListener(SinavEditActivity.this);
+                sinifPopup.inflate(R.menu.sinif_menu);
+                sinifPopup.show();
+            }
+        });
+
+
         buttonekle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,7 +78,7 @@ public class SinavEditActivity extends AppCompatActivity implements PopupMenu.On
                     database = new Database(getApplicationContext());
                     final String x1 = textView.getText().toString();
                     final String x2 = textView2.getText().toString();
-                    final String x3 = editText3.getText().toString();
+                    final String x3 = textView3.getText().toString();
                     final String x4 = editText1.getText().toString();
                     final String x5 = editText2.getText().toString();
 
@@ -117,7 +129,7 @@ public class SinavEditActivity extends AppCompatActivity implements PopupMenu.On
                         alert.create().show();
                     }
                     else{
-                        boolean dd = database.SinavEkle(textView.getText().toString(),textView2.getText().toString(),editText3.getText().toString(),editText1.getText().toString(),editText2.getText().toString());
+                        boolean dd = database.SinavEkle(textView.getText().toString(),textView2.getText().toString(),textView3.getText().toString(),editText1.getText().toString(),editText2.getText().toString());
                         //boolean dd = database.VeriEkle();
                         if(dd == true) {
                             Toast.makeText(getApplicationContext(), "Veri Yüklendi", Toast.LENGTH_SHORT).show();
@@ -135,7 +147,7 @@ public class SinavEditActivity extends AppCompatActivity implements PopupMenu.On
                 }catch (Exception e){
                     Toast.makeText(getApplicationContext(),"HATA", Toast.LENGTH_SHORT).show();
                 }
-                editText3.setText("");
+                textView3.setText("");
                 editText1.setText("");
                 editText2.setText("");
 
@@ -204,8 +216,21 @@ public class SinavEditActivity extends AppCompatActivity implements PopupMenu.On
             case R.id.item17:
                 textView2.setText("00.00");
                 return true;
+            case R.id.sinif1:
+                textView3.setText("1.Sınıf");
+                return true;
+            case R.id.sinif2:
+                textView3.setText("2.Sınıf");
+                return true;
+            case R.id.sinif3:
+                textView3.setText("3.Sınıf");
+                return true;
+            case R.id.sinif4:
+                textView3.setText("4.Sınıf");
+                return true;
             default:
                 return false;
         }
     }
+
 }

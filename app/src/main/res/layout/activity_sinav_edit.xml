@@ -30,14 +30,16 @@
         android:textStyle="bold"
         tools:ignore="onClick"/>
 
-    <EditText
+    <TextView
         android:id="@+id/sinif"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/gun"
-        android:hint="Sınıf"/>
+        android:hint="Sınıf Seçiniz"
+        android:textStyle="bold"
+        android:textSize="25sp"/>
 
     <EditText
         android:id="@+id/dersAdi"

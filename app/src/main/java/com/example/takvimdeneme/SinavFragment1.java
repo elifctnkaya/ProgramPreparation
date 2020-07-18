@@ -95,72 +95,72 @@ public class SinavFragment1 extends Fragment {
             if (gunn.contentEquals("PAZARTESİ")) {
                 switch (saat) {
                     case "08.00":
-                        de1.setText(sinif + " " + ders + "\n" + hoca);
-                        de1.setBackgroundColor(Color.BLUE);
+                        de1.setText(sinif + "\n" + ders + "-" + hoca);
+                        de1.setBackgroundColor(Color.rgb(123,86,198));
                         break;
                     case "09.00":
-                        de2.setText(sinif + " " + ders + "\n" + hoca);
-                        de2.setBackgroundColor(Color.BLUE);
+                        de2.setText(sinif + "\n" + ders + "-" + hoca);
+                        de2.setBackgroundColor(Color.rgb(123,86,198));
                         break;
                     case "10.00":
-                        de3.setText(sinif + " " + ders + "\n" + hoca);
-                        de3.setBackgroundColor(Color.BLUE);
+                        de3.setText(sinif + "\n" + ders + "-" + hoca);
+                        de3.setBackgroundColor(Color.rgb(123,86,198));
                         break;
                     case "11.00":
-                        de4.setText(sinif + " " + ders + "\n" + hoca);
-                        de4.setBackgroundColor(Color.BLUE);
+                        de4.setText(sinif + "\n" + ders + "-" + hoca);
+                        de4.setBackgroundColor(Color.rgb(123,86,198));
                         break;
                     case "12.00":
-                        de5.setText(sinif + " " + ders + "\n" + hoca);
-                        de5.setBackgroundColor(Color.BLUE);
+                        de5.setText(sinif + "\n" + ders + "-" + hoca);
+                        de5.setBackgroundColor(Color.rgb(123,86,198));
                         break;
                     case "13.00":
-                        de6.setText(sinif + " " + ders + "\n" + hoca);
-                        de6.setBackgroundColor(Color.BLUE);
+                        de6.setText(sinif + "\n" + ders + "-" + hoca);
+                        de6.setBackgroundColor(Color.rgb(123,86,198));
                         break;
                     case "14.00":
-                        de7.setText(sinif + " " + ders + "\n" + hoca);
-                        de7.setBackgroundColor(Color.BLUE);
+                        de7.setText(sinif + "\n" + ders + "-" + hoca);
+                        de7.setBackgroundColor(Color.rgb(123,86,198));
                         break;
                     case "15.00":
-                        de8.setText(sinif + " " + ders + "\n" + hoca);
-                        de8.setBackgroundColor(Color.BLUE);
+                        de8.setText(sinif + "\n" + ders + "-" + hoca);
+                        de8.setBackgroundColor(Color.rgb(123,86,198));
                         break;
                     case "16.00":
-                        de9.setText(sinif + " " + ders + "\n" + hoca);
-                        de9.setBackgroundColor(Color.BLUE);
+                        de9.setText(sinif + "\n" + ders + "-" + hoca);
+                        de9.setBackgroundColor(Color.rgb(123,86,198));
                         break;
                     case "17.00":
-                        de10.setText(sinif + " " + ders + "\n" + hoca);
-                        de10.setBackgroundColor(Color.BLUE);
+                        de10.setText(sinif + "\n" + ders + "-" + hoca);
+                        de10.setBackgroundColor(Color.rgb(123,86,198));
                         break;
                     case "18.00":
-                        de11.setText(sinif + " " + ders + "\n" + hoca);
-                        de11.setBackgroundColor(Color.BLUE);
+                        de11.setText(sinif + "\n" + ders + "-" + hoca);
+                        de11.setBackgroundColor(Color.rgb(123,86,198));
                         break;
                     case "19.00":
-                        de12.setText(sinif + " " + ders + "\n" + hoca);
-                        de12.setBackgroundColor(Color.BLUE);
+                        de12.setText(sinif + "\n" + ders + "-" + hoca);
+                        de12.setBackgroundColor(Color.rgb(123,86,198));
                         break;
                     case "20.00":
-                        de13.setText(sinif + " " + ders + "\n" + hoca);
-                        de13.setBackgroundColor(Color.BLUE);
+                        de13.setText(sinif + "\n" + ders + "-" + hoca);
+                        de13.setBackgroundColor(Color.rgb(123,86,198));
                         break;
                     case "21.00":
-                        de14.setText(sinif + " " + ders + "\n" + hoca);
-                        de14.setBackgroundColor(Color.BLUE);
+                        de14.setText(sinif + "\n" + ders + "-" + hoca);
+                        de14.setBackgroundColor(Color.rgb(123,86,198));
                         break;
                     case "22.00":
-                        de15.setText(sinif + " " + ders + "\n" + hoca);
-                        de15.setBackgroundColor(Color.BLUE);
+                        de15.setText(sinif + "\n" + ders + "-" + hoca);
+                        de15.setBackgroundColor(Color.rgb(123,86,198));
                         break;
                     case "23.00":
-                        de16.setText(sinif + " " + ders + "\n" + hoca);
-                        de16.setBackgroundColor(Color.BLUE);
+                        de16.setText(sinif + "\n" + ders + "-" + hoca);
+                        de16.setBackgroundColor(Color.rgb(123,86,198));
                         break;
                     case "00.00":
-                        de17.setText(sinif + " " + ders + "\n" + hoca);
-                        de17.setBackgroundColor(Color.BLUE);
+                        de17.setText(sinif + "\n" + ders + "-" + hoca);
+                        de17.setBackgroundColor(Color.rgb(123,86,198));
                         break;
                 }
             }
