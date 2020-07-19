@@ -46,7 +46,6 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         editText1 = findViewById(R.id.dersAdi);
         editText2 = findViewById(R.id.hocaismi);
         buttonekle = findViewById(R.id.ekle);
-        //final String gun = this.getIntent().getExtras().getString("GUN");
         Bundle bundle = getIntent().getExtras();
         final String gun = bundle.getString("GUN");
         String clock = bundle.getString("SAAT");
@@ -54,6 +53,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         textView.setText(gun);
         textView2.setText(clock);
         final String gunn = textView.getText().toString();
+
             //saatleri tablo seklinde gösteren kod
             textView2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -87,7 +87,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                         final String x4 = editText1.getText().toString();
                         final String x5 = editText2.getText().toString();
 
-                        ////////////////////////////////////////////////
+                        ///////////////////////////////////
                         final int[] kontrol = {0};
                         final int[] hoca_kontrol = {0};
                         ArrayList<ProgramTable> gelenler = database.TumVeriler();
@@ -98,7 +98,6 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                             String ders = e.getDers();
                             String hoca = e.getHoca();
 
-                            System.out.println("Gün: " + gunn + " Saat: " + saat + "Sınıf: "+sinif+ " Ders: " + ders + " Hoca: " + hoca);
                             if (gunn.contentEquals(textView.getText().toString()) && saat.contentEquals(textView2.getText().toString())) {
                                 kontrol[0] = 1;
                             }
@@ -131,7 +130,6 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                                     else{
                                         boolean ed = database.VeriGuncelle(x1, x2, x3, x4,x5);
                                         if(ed == true){
-                                            System.out.println("Ekrana Bas");
                                             Toast.makeText(getApplicationContext(),"Veri Güncellendi", Toast.LENGTH_SHORT).show();
                                             Intent intent = new Intent(EditActivity.this,MainActivity.class);
                                             startActivity(intent);
@@ -180,8 +178,6 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                             }
                         }
 
-                        ////////////////////////////////////////////////
-
                     }catch (Exception e){
                         Toast.makeText(getApplicationContext(),"HATA", Toast.LENGTH_SHORT).show();
                     }
@@ -191,10 +187,6 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
 
                 }
             });
-
-
-        ////
-
 
     }
 

@@ -22,7 +22,6 @@ import java.util.ArrayList;
 public class Fragment3 extends Fragment {
 
     private TextView textView1;
-    private Button button;
     private Button buton1;
     private Button buton2;
 
@@ -58,7 +57,6 @@ public class Fragment3 extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment3,container,false);
         textView1 = view.findViewById(R.id.textview);
-        //button = view.findViewById(R.id.sayfaninTamami);
 
         //Saat Tanımlamaları
         de1 = view.findViewById(R.id.editText);
@@ -90,76 +88,75 @@ public class Fragment3 extends Fragment {
             String ders = e.getDers();
             String hoca = e.getHoca();
 
-            System.out.println("Gün: "+gunn+" Saat: "+saat+ "Sınıf: " +sinif +" Ders: "+ders+" Hoca: "+hoca);
             if(gunn.contentEquals("ÇARŞAMBA")){
                 switch (saat){
                     case "08.00":
                         de1.setText(sinif + " " +ders+"\n"+hoca);
-                        de1.setBackgroundColor(Color.BLUE);
+                        de1.setBackgroundColor(Color.rgb(204, 229, 255));
                         break;
                     case "09.00":
                         de2.setText(sinif + " " +ders+"\n"+hoca);
-                        de2.setBackgroundColor(Color.BLUE);
+                        de2.setBackgroundColor(Color.rgb(204, 229, 255));
                         break;
                     case "10.00":
                         de3.setText(sinif + " " +ders+"\n"+hoca);
-                        de3.setBackgroundColor(Color.BLUE);
+                        de3.setBackgroundColor(Color.rgb(204, 229, 255));
                         break;
                     case "11.00":
                         de4.setText(sinif + " " +ders+"\n"+hoca);
-                        de4.setBackgroundColor(Color.BLUE);
+                        de4.setBackgroundColor(Color.rgb(204, 229, 255));
                         break;
                     case "12.00":
                         de5.setText(sinif + " " +ders+"\n"+hoca);
-                        de5.setBackgroundColor(Color.BLUE);
+                        de5.setBackgroundColor(Color.rgb(204, 229, 255));
                         break;
                     case "13.00":
                         de6.setText(sinif + " " +ders+"\n"+hoca);
-                        de6.setBackgroundColor(Color.BLUE);
+                        de6.setBackgroundColor(Color.rgb(204, 229, 255));
                         break;
                     case "14.00":
                         de7.setText(sinif + " " +ders+"\n"+hoca);
-                        de7.setBackgroundColor(Color.BLUE);
+                        de7.setBackgroundColor(Color.rgb(204, 229, 255));
                         break;
                     case "15.00":
                         de8.setText(sinif + " " +ders+"\n"+hoca);
-                        de8.setBackgroundColor(Color.BLUE);
+                        de8.setBackgroundColor(Color.rgb(204, 229, 255));
                         break;
                     case "16.00":
                         de9.setText(sinif + " " +ders+"\n"+hoca);
-                        de9.setBackgroundColor(Color.BLUE);
+                        de9.setBackgroundColor(Color.rgb(204, 229, 255));
                         break;
                     case "17.00":
                         de10.setText(sinif + " " +ders+"\n"+hoca);
-                        de10.setBackgroundColor(Color.BLUE);
+                        de10.setBackgroundColor(Color.rgb(204, 229, 255));
                         break;
                     case "18.00":
                         de11.setText(sinif + " " +ders+"\n"+hoca);
-                        de11.setBackgroundColor(Color.BLUE);
+                        de11.setBackgroundColor(Color.rgb(204, 229, 255));
                         break;
                     case "19.00":
                         de12.setText(sinif + " " +ders+"\n"+hoca);
-                        de12.setBackgroundColor(Color.BLUE);
+                        de12.setBackgroundColor(Color.rgb(204, 229, 255));
                         break;
                     case "20.00":
                         de13.setText(sinif + " " +ders+"\n"+hoca);
-                        de13.setBackgroundColor(Color.BLUE);
+                        de13.setBackgroundColor(Color.rgb(204, 229, 255));
                         break;
                     case "21.00":
                         de14.setText(sinif + " " +ders+"\n"+hoca);
-                        de14.setBackgroundColor(Color.BLUE);
+                        de14.setBackgroundColor(Color.rgb(204, 229, 255));
                         break;
                     case "22.00":
                         de15.setText(sinif + " " +ders+"\n"+hoca);
-                        de15.setBackgroundColor(Color.BLUE);
+                        de15.setBackgroundColor(Color.rgb(204, 229, 255));
                         break;
                     case "23.00":
                         de16.setText(sinif + " " +ders+"\n"+hoca);
-                        de16.setBackgroundColor(Color.BLUE);
+                        de16.setBackgroundColor(Color.rgb(204, 229, 255));
                         break;
                     case "00.00":
                         de17.setText(sinif + " " +ders+"\n"+hoca);
-                        de17.setBackgroundColor(Color.BLUE);
+                        de17.setBackgroundColor(Color.rgb(204, 229, 255));
                         break;
                 }
             }
@@ -174,7 +171,6 @@ public class Fragment3 extends Fragment {
         de1.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
@@ -198,7 +194,6 @@ public class Fragment3 extends Fragment {
         de2.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
@@ -221,7 +216,6 @@ public class Fragment3 extends Fragment {
         de3.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
@@ -244,7 +238,6 @@ public class Fragment3 extends Fragment {
         de4.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
@@ -267,7 +260,6 @@ public class Fragment3 extends Fragment {
         de5.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
@@ -290,7 +282,6 @@ public class Fragment3 extends Fragment {
         de6.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
@@ -313,7 +304,6 @@ public class Fragment3 extends Fragment {
         de7.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
@@ -336,7 +326,6 @@ public class Fragment3 extends Fragment {
         de8.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
@@ -359,7 +348,6 @@ public class Fragment3 extends Fragment {
         de9.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
@@ -382,7 +370,6 @@ public class Fragment3 extends Fragment {
         de10.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
@@ -405,7 +392,6 @@ public class Fragment3 extends Fragment {
         de11.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
@@ -428,7 +414,6 @@ public class Fragment3 extends Fragment {
         de12.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
@@ -451,7 +436,6 @@ public class Fragment3 extends Fragment {
         de13.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
@@ -474,7 +458,6 @@ public class Fragment3 extends Fragment {
         de14.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
@@ -497,7 +480,6 @@ public class Fragment3 extends Fragment {
         de15.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
@@ -520,7 +502,6 @@ public class Fragment3 extends Fragment {
         de16.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
@@ -543,7 +524,6 @@ public class Fragment3 extends Fragment {
         de17.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                //Toast.makeText(getContext(),"Duzenle Butonu Çalıştı",Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                 alertDialog.setTitle("SİLMEK İSTEDİĞİNİZE EMİN MİSİNİZ ?");
                 alertDialog.setIcon(R.drawable.delete);
@@ -557,30 +537,6 @@ public class Fragment3 extends Fragment {
                 return false;
             }
         });
-
-
-       /* button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-                alertDialog.setTitle("EKLE YA DA SİL");
-                alertDialog.setIcon(R.drawable.uyari);
-                alertDialog.setPositiveButton("EKLE", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        ekleCalisti();
-                    }
-                });
-
-                alertDialog.setNegativeButton("SİL", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        silCalisti();
-                    }
-                });
-                alertDialog.create().show();
-            }
-        });*/
 
 
         buton1 = view.findViewById(R.id.buton1);
@@ -602,19 +558,11 @@ public class Fragment3 extends Fragment {
         return view;
     }
 
-    public void sendData(){
-        Intent intent = new Intent(getActivity(),EditActivity.class);
-        intent.putExtra("GUN",textView1.getText().toString());
-
-        startActivity(intent);
-    }
-
     public void ekleCalisti(String saat){
         Intent intent = new Intent(getActivity(),EditActivity.class);
         Bundle bundle = new Bundle();
         bundle.putString("GUN",textView1.getText().toString());
         bundle.putString("SAAT",saat);
-        //bundle.putString("STATE","EKLE");
         intent.putExtras(bundle);
         startActivity(intent);
     }

@@ -93,8 +93,6 @@ public class SinavEditActivity extends AppCompatActivity implements PopupMenu.On
                         String ders = e.getSinav_ders();
                         String hoca = e.getSinav_hoca();
 
-                        System.out.println("WQXXXGün: " + gunn + " Saat: " + saat + "Sınıf: "+sinif+ " Ders: " + ders + " Hoca: " + hoca);
-
                         if (gunn.contentEquals(textView.getText().toString()) && saat.contentEquals(textView2.getText().toString())) {
                             kontrol[0] = 1;
                         }
@@ -125,11 +123,9 @@ public class SinavEditActivity extends AppCompatActivity implements PopupMenu.On
                                     alert.create().show();
                                 }
                                 else{
-                                    //System.out.println("VERİLER ::: " + x1 + x2 + x3 + x4 + x5);
                                     boolean ed = database.SinavGuncelle(x1, x2, x3, x4,x5);
 
                                     if(ed == true){
-                                        System.out.println("Ekrana Bas");
                                         Toast.makeText(getApplicationContext(),"Veri Güncellendi", Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(SinavEditActivity.this,SinavMainActivity.class);
                                         startActivity(intent);
@@ -168,7 +164,6 @@ public class SinavEditActivity extends AppCompatActivity implements PopupMenu.On
                         }
                         else {
                             boolean dd = database.SinavEkle(textView.getText().toString(), textView2.getText().toString(), textView3.getText().toString(), editText1.getText().toString(), editText2.getText().toString());
-                            //boolean dd = database.VeriEkle();
                             if (dd == true) {
                                 Toast.makeText(getApplicationContext(), "Veri Yüklendi", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(SinavEditActivity.this, SinavMainActivity.class);
@@ -178,36 +173,6 @@ public class SinavEditActivity extends AppCompatActivity implements PopupMenu.On
                             }
                         }
                     }
-                        ///////////SINIF KONTROLÜ/////////////////
-                    /*if (sinif_kontrol[0] == 1) {
-                        AlertDialog.Builder alert = new AlertDialog.Builder(SinavEditActivity.this);
-                        alert.setTitle("Eklemek İstediğiniz Sınıf Eklenmiş");
-                        alert.setMessage("Bir günde sadece bir sınıf eklenebilir.");
-                        alert.setIcon(R.drawable.unlem);
-
-                        alert.setNegativeButton("TAMAM", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                Toast.makeText(getApplicationContext(), "Veri Eklenmedi", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-                        alert.create().show();
-                    }
-                    else{
-                        boolean dd = database.SinavGuncelle(textView.getText().toString(),textView2.getText().toString(),textView3.getText().toString(),editText1.getText().toString(),editText2.getText().toString());
-                        //boolean dd = database.VeriEkle();
-                        if(dd == true) {
-                            Toast.makeText(getApplicationContext(), "Veri Yüklendi", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(SinavEditActivity.this,SinavMainActivity.class);
-                            startActivity(intent);
-
-                        }
-                        else{
-                            Toast.makeText(getApplicationContext(),"Veri Yüklenemedi", Toast.LENGTH_SHORT).show();
-                        }
-                    }*/
-
-                    ////////////////////////////////////////////////
 
                 }catch (Exception e){
                     Toast.makeText(getApplicationContext(),"HATA", Toast.LENGTH_SHORT).show();

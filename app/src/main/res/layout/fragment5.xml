@@ -13,7 +13,7 @@
         android:paddingTop="30dp"
         android:paddingBottom="20dp"
         android:orientation="horizontal"
-        android:background="@color/colorblue">
+        android:background="@color/colorrenk">
 
         <TextView
             android:id="@+id/textview"
@@ -32,15 +32,6 @@
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"
             android:background="@drawable/new2_buttonleft"/>
-
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:id="@+id/buton2"
-            android:layout_toRightOf="@+id/textview"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/new2_button"/>
-
 
     </RelativeLayout>
 
@@ -61,14 +52,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2">
 
-               <!-- <Button
-                    android:id="@+id/sayfaninTamami"
-                    android:layout_width="500dp"
-                    android:layout_height="700dp"
-                    android:layout_marginLeft="55dp"
-                    android:layout_marginTop="15dp"
-                    android:alpha = "0"
-                    />-->
 
                 <TextView
                     android:id="@+id/textView"

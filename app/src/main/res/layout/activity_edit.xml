@@ -67,7 +67,7 @@
         android:layout_marginTop="20dp"
         android:text="EKLE"
         android:textStyle="bold"
-        android:background="#00FF55"
+        android:background="#00FF00"
         android:visibility="visible"
         />
 
