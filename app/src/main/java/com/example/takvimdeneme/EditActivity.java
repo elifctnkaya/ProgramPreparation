@@ -33,7 +33,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
     private TextView textView2;
     private Database database;
     private Fragment fragment;
-    private EditText editText3;
+    private TextView textView3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +42,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
 
         textView = findViewById(R.id.gun);
         textView2 = findViewById(R.id.saat);
-        editText3 = findViewById(R.id.sinif);
+        textView3 = findViewById(R.id.sinif);
         editText1 = findViewById(R.id.dersAdi);
         editText2 = findViewById(R.id.hocaismi);
         buttonekle = findViewById(R.id.ekle);
@@ -65,19 +65,31 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                 }
             });
 
-            buttonekle.setOnClickListener(new View.OnClickListener() {
+        textView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupMenu sinifPopup = new PopupMenu(EditActivity.this, textView3);
+                sinifPopup.setOnMenuItemClickListener(EditActivity.this);
+                sinifPopup.inflate(R.menu.sinif_menu);
+                sinifPopup.show();
+            }
+        });
+
+
+        buttonekle.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     try {
                         database = new Database(getApplicationContext());
                         final String x1 = textView.getText().toString();
                         final String x2 = textView2.getText().toString();
-                        final String x3 = editText3.getText().toString();
+                        final String x3 = textView3.getText().toString();
                         final String x4 = editText1.getText().toString();
                         final String x5 = editText2.getText().toString();
 
                         ////////////////////////////////////////////////
                         final int[] kontrol = {0};
+                        final int[] hoca_kontrol = {0};
                         ArrayList<ProgramTable> gelenler = database.TumVeriler();
                         for (ProgramTable e : gelenler) {
                             String gunn = e.getGun();
@@ -90,6 +102,9 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                             if (gunn.contentEquals(textView.getText().toString()) && saat.contentEquals(textView2.getText().toString())) {
                                 kontrol[0] = 1;
                             }
+                            if(gunn.contentEquals(textView.getText().toString()) && hoca.contentEquals(editText2.getText().toString())){
+                                hoca_kontrol[0] = 1;
+                            }
                         }
                         if (kontrol[0] == 1) {
                             AlertDialog.Builder alert = new AlertDialog.Builder(EditActivity.this);
@@ -99,19 +114,34 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                             alert.setPositiveButton("EVET", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    System.out.println("VERİLER ::: " + x1 + x2 + x3 + x4 + x5);
-                                    boolean ed = database.VeriGuncelle(x1, x2, x3, x4,x5);
+                                    if(hoca_kontrol[0] == 1){
+                                        AlertDialog.Builder alert = new AlertDialog.Builder(EditActivity.this);
+                                        alert.setTitle("Eklemek İstediğiniz Hoca İsmi Eklenmiş");
+                                        alert.setMessage("Bir günde sadece bir hoca eklenebilir.");
+                                        alert.setIcon(R.drawable.unlem);
 
-                                    if(ed == true){
-                                        System.out.println("Ekrana Bas");
-                                        Toast.makeText(getApplicationContext(),"Veri Güncellendi", Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(EditActivity.this,MainActivity.class);
-                                        startActivity(intent);
-
+                                        alert.setNegativeButton("TAMAM", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                Toast.makeText(getApplicationContext(), "Veri Eklenmedi", Toast.LENGTH_SHORT).show();
+                                            }
+                                        });
+                                        alert.create().show();
                                     }
                                     else{
-                                        Toast.makeText(getApplicationContext(),"Veri Güncellenmedi", Toast.LENGTH_SHORT).show();
+                                        boolean ed = database.VeriGuncelle(x1, x2, x3, x4,x5);
+                                        if(ed == true){
+                                            System.out.println("Ekrana Bas");
+                                            Toast.makeText(getApplicationContext(),"Veri Güncellendi", Toast.LENGTH_SHORT).show();
+                                            Intent intent = new Intent(EditActivity.this,MainActivity.class);
+                                            startActivity(intent);
+
+                                        }
+                                        else{
+                                            Toast.makeText(getApplicationContext(),"Veri Güncellenmedi", Toast.LENGTH_SHORT).show();
+                                        }
                                     }
+
                                 }
                             });
                             alert.setNegativeButton("HAYIR", new DialogInterface.OnClickListener() {
@@ -123,16 +153,30 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                             alert.create().show();
                         }
                         else{
-                            boolean dd = database.VeriEkle(textView.getText().toString(),textView2.getText().toString(),editText3.getText().toString(),editText1.getText().toString(),editText2.getText().toString());
-                            //boolean dd = database.VeriEkle();
-                            if(dd == true) {
-                                Toast.makeText(getApplicationContext(), "Veri Yüklendi", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(EditActivity.this,MainActivity.class);
-                                startActivity(intent);
+                            if(hoca_kontrol[0] == 1) {
+                                AlertDialog.Builder alert = new AlertDialog.Builder(EditActivity.this);
+                                alert.setTitle("Eklemek İstediğiniz Hoca İsmi Eklenmiş");
+                                alert.setMessage("Bir günde sadece bir hoca eklenebilir.");
+                                alert.setIcon(R.drawable.unlem);
 
+                                alert.setNegativeButton("TAMAM", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        Toast.makeText(getApplicationContext(), "Veri Eklenmedi", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                                alert.create().show();
                             }
                             else{
-                                Toast.makeText(getApplicationContext(),"Veri Yüklenemedi", Toast.LENGTH_SHORT).show();
+                                boolean dd = database.VeriEkle(textView.getText().toString(),textView2.getText().toString(),textView3.getText().toString(),editText1.getText().toString(),editText2.getText().toString());
+                                if(dd == true) {
+                                    Toast.makeText(getApplicationContext(), "Veri Yüklendi", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(EditActivity.this,MainActivity.class);
+                                    startActivity(intent);
+                                }
+                                else {
+                                    Toast.makeText(getApplicationContext(), "Veri Yüklenemedi", Toast.LENGTH_SHORT).show();
+                                }
                             }
                         }
 
@@ -141,7 +185,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                     }catch (Exception e){
                         Toast.makeText(getApplicationContext(),"HATA", Toast.LENGTH_SHORT).show();
                     }
-                    editText3.setText("");
+                    textView3.setText("");
                     editText1.setText("");
                     editText2.setText("");
 
@@ -214,6 +258,18 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                 return true;
             case R.id.item17:
                 textView2.setText("00.00");
+                return true;
+            case R.id.sinif1:
+                textView3.setText("1.Sınıf");
+                return true;
+            case R.id.sinif2:
+                textView3.setText("2.Sınıf");
+                return true;
+            case R.id.sinif3:
+                textView3.setText("3.Sınıf");
+                return true;
+            case R.id.sinif4:
+                textView3.setText("4.Sınıf");
                 return true;
             default:
                 return false;
