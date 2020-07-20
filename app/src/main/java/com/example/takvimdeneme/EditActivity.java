@@ -116,7 +116,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                                     if(hoca_kontrol[0] == 1){
                                         AlertDialog.Builder alert = new AlertDialog.Builder(EditActivity.this);
                                         alert.setTitle("Eklemek İstediğiniz Hoca İsmi Eklenmiş");
-                                        alert.setMessage("Bir günde sadece bir hoca eklenebilir.");
+                                        alert.setMessage("Bir günde bir hoca için sadece bir ders eklenebilir.");
                                         alert.setIcon(R.drawable.unlem);
 
                                         alert.setNegativeButton("TAMAM", new DialogInterface.OnClickListener() {
@@ -154,7 +154,7 @@ public class EditActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                             if(hoca_kontrol[0] == 1) {
                                 AlertDialog.Builder alert = new AlertDialog.Builder(EditActivity.this);
                                 alert.setTitle("Eklemek İstediğiniz Hoca İsmi Eklenmiş");
-                                alert.setMessage("Bir günde sadece bir hoca eklenebilir.");
+                                alert.setMessage("Bir günde bir hoca için sadece bir ders eklenebilir.");
                                 alert.setIcon(R.drawable.unlem);
 
                                 alert.setNegativeButton("TAMAM", new DialogInterface.OnClickListener() {

@@ -111,7 +111,7 @@ public class SinavEditActivity extends AppCompatActivity implements PopupMenu.On
                                 if(sinif_kontrol[0] == 1){
                                     AlertDialog.Builder alert = new AlertDialog.Builder(SinavEditActivity.this);
                                     alert.setTitle("Eklemek İstediğiniz Sınıf Eklenmiş");
-                                    alert.setMessage("Bir günde sadece bir sınıf eklenebilir.");
+                                    alert.setMessage("Bir günde bir sınıf için sadece bir sınav eklenebilir.");
                                     alert.setIcon(R.drawable.unlem);
 
                                     alert.setNegativeButton("TAMAM", new DialogInterface.OnClickListener() {
@@ -151,7 +151,7 @@ public class SinavEditActivity extends AppCompatActivity implements PopupMenu.On
                         if (sinif_kontrol[0] == 1){
                             AlertDialog.Builder alert = new AlertDialog.Builder(SinavEditActivity.this);
                             alert.setTitle("Eklemek İstediğiniz Sınıf Eklenmiş");
-                            alert.setMessage("Bir günde sadece bir sınıf eklenebilir.");
+                            alert.setMessage("Bir günde bir sınıf için sadece bir sınav eklenebilir.");
                             alert.setIcon(R.drawable.unlem);
 
                             alert.setNegativeButton("TAMAM", new DialogInterface.OnClickListener() {
